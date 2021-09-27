@@ -1,0 +1,105 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+{% block content %}
+    <script type="text/javascript" src="{% static 'js/common.js' %}"></script>
+    <script language="JavaScript" type="text/javascript">
+        var cssArr = ['el/el-tree.css', 'css/sys/org.css', 'el/el-tree.js', 'js/axios.min.js'];
+        createJC(cssArr);
+    </script>
+
+    <!-- 载入自定义模板过滤器 -->
+    {% load sysfilter %}
+    <div class="div_tree">
+        <div id="orgTree">
+            <el-tree ref="eltree"
+                     node-key="id"
+                     :data="treedata"
+                     :props="props"
+                     :highlight-current="true"
+                     :default-expanded-keys="expKeys"
+                     @node-click="handleNodeClick"
+                     @node-expand="handleNodeExpand"
+                     :expand-on-click-node="false">
+            </el-tree>
+        </div>
+        <div id="divHidden">
+            <input type="hidden" v-model:value="orgnodevalue">
+        </div>
+    </div>
+    <div class="actions">
+        <div class="div_right">
+            <el-alert
+                    title="注意！添加顺序为：公司->部门->组->岗位"
+                    type="warning"
+                    effect="light">
+            </el-alert>
+            <div class="div_btn_top">
+                {% if has_add_permission %}
+                    <el-button size="small" type="info" icon="el-icon-plus" @click="addControl" :disabled="disAdd">
+                        {{ 'Add'|customtrans }}
+                    </el-button>
+                {% endif %}
+                {% if has_change_permission %}
+                    <el-button size="small" type="info" icon="el-icon-plus" @click="updateControl"
+                               :disabled="disUpdate">
+                        {{ 'Update'|customtrans }}
+                    </el-button>
+                {% endif %}
+                {% if has_delete_permission %}
+                    <el-button size="small" type="info" icon="el-icon-plus" @click="deleteOrg"
+                               :disabled="disDelete">
+                        {{ 'Delete'|customtrans }}
+                    </el-button>
+                {% endif %}
+                <el-button size="small" type="info" icon="el-icon-plus" @click="cancleSetValue" :disabled="disCancle">
+                    {{ 'Cancle'|customtrans }}
+                </el-button>
+            </div>
+            <div class="div_org_content">
+                <div class="div_msg" v-html="msg"></div>
+                <el-form ref="myForm" :model="form" label-width="100px" :disabled="disForm" :rules="rules">
+                    <el-form-item label="{{ 'ObjType'|customtrans }}" class="el_itemhegiht" prop="orgselected">
+                        <el-select v-model="form.orgselected" @change="getOrgSelected" size="small"
+                                   class="el_inputwidth" :disabled="form.disOrgType" placeholder="请选择类型">
+                            <el-option :value="org.id" v-for="org in form.orgtypes" :label={{ "org.name"|customtrans }}
+                                    :disabled="org.disabled">
+                            </el-option>
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item label="{{ 'ObjName'|customtrans }}" class="el_itemhegiht" prop="orgname">
+                        <el-input ref="txtOrgName" v-model="form.orgname" size="small" class="el_inputwidth"
+                                  maxlength="20"></el-input>
+                    </el-form-item>
+                    <el-form-item label="{{ 'Status'|customtrans }}" class="el_itemhegiht">
+                        <el-select v-model="form.staselected" size="small" class="el_inputwidth">
+                            <el-option :value="sta.id" v-for="sta in form.orgstatus"
+                                       :label={{ "sta.name"|customtrans }}></el-option>
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item label="{{ 'Remarks'|customtrans }}" class="el_itemhegiht">
+                        <el-input type="textarea" v-model="form.orgremark" maxlength="50"></el-input>
+                    </el-form-item>
+                </el-form>
+                <div style="text-align: right;">
+                    <br>
+                    <br>
+                    <br>
+                    <el-button size="small" icon="el-icon-circle-check" type="success" :disabled="disSave"
+                               style="margin-right: 20px;" @click="orgsave"> {{ 'Save'|customtrans }}</el-button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" language="JavaScript">
+        var _orgTreeData = '';
+
+        // DTL模板中默认已经开启了自动转义,使用autoescape off 关闭
+        {% autoescape off %}
+            _orgTreeData = {{ orgtree }};
+        {% endautoescape %}
+
+        cssArr = ['js/sys/org.js'];
+        createJC(cssArr);
+    </script>
+
+{% endblock %}

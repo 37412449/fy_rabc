@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bd69a120-4bf0-49b9-ad72-0c2ece949e60" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Python Script" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1wWayf5rMd1m4CYn48OOAdVe9io" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/simpleui/static/admin/js/vendor/xregexp" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\fy_rabc\fy_rabc_sys" />
+      <recent name="D:\fy_rabc\fy_rabc_sys\sys_models\templatetags" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\fy_rabc\simpleui\static\admin\js\vendor\xregexp" />
+      <recent name="D:\fy_rabc\fy_rabc_sys\common" />
+      <recent name="D:\fy_rabc\simpleui\static" />
+      <recent name="D:\fy_rabc\fy_rabc_sys\static\js" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Django server.fy_rabc">
+    <configuration name="PermissionManage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="fy_rabc" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fy_rabc" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fy_rabc/PermissionManage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="s_res" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="fy_rabc" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fy_rabc_sys/sys_service" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fy_rabc_sys/sys_service/s_res.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sys_comm" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="fy_rabc" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fy_rabc/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fy_rabc/common/sys_comm.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fy_rabc" type="Python.DjangoServer" factoryName="Django server">
+      <module name="fy_rabc" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="fy_rabc.settings" />
+      </envs>
+      <option name="SDK_HOME" value="D:\fy_rabc\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8008" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django server.fy_rabc" />
+      <item itemvalue="Python.PermissionManage" />
+      <item itemvalue="Python.sys_comm" />
+      <item itemvalue="Python.s_res" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.s_res" />
+        <item itemvalue="Python.sys_comm" />
+        <item itemvalue="Python.PermissionManage" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bd69a120-4bf0-49b9-ad72-0c2ece949e60" name="Default Changelist" comment="" />
+      <created>1628577053012</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1628577053012</updated>
+      <workItem from="1628577099997" duration="10415000" />
+      <workItem from="1628589898914" duration="21000" />
+      <workItem from="1628589924808" duration="4610000" />
+      <workItem from="1628647695428" duration="1359000" />
+      <workItem from="1628649949611" duration="1637000" />
+      <workItem from="1628652747331" duration="886000" />
+      <workItem from="1628653939362" duration="27903000" />
+      <workItem from="1628745257574" duration="2361000" />
+      <workItem from="1628748218931" duration="42696000" />
+      <workItem from="1629076370298" duration="328694000" />
+      <workItem from="1630288147595" duration="48447000" />
+      <workItem from="1630460541447" duration="1611000" />
+      <workItem from="1630463039672" duration="51086000" />
+      <workItem from="1630574349692" duration="57000" />
+      <workItem from="1630576141175" duration="146039000" />
+      <workItem from="1631601304054" duration="13071000" />
+      <workItem from="1631677939050" duration="6370000" />
+      <workItem from="1632273788285" duration="105065000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1632278974428">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632278974428" />
+    <state width="1276" height="714" key="DebuggerActiveHint" timestamp="1632730943658">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1276" height="714" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1632730943658" />
+    <state x="740" y="278" key="FileChooserDialogImpl" timestamp="1630131015164">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630131015164" />
+    <state width="1877" height="229" key="GridCell.Tab.0.bottom" timestamp="1632728849412">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="229" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632728849412" />
+    <state width="1877" height="229" key="GridCell.Tab.0.center" timestamp="1632728849412">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="229" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632728849412" />
+    <state width="1877" height="229" key="GridCell.Tab.0.left" timestamp="1632728849412">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="229" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632728849412" />
+    <state width="1877" height="229" key="GridCell.Tab.0.right" timestamp="1632728849412">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="229" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632728849412" />
+    <state width="1877" height="229" key="GridCell.Tab.1.bottom" timestamp="1632728838780">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="229" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632728838780" />
+    <state width="1877" height="229" key="GridCell.Tab.1.center" timestamp="1632728838780">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="229" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632728838780" />
+    <state width="1877" height="229" key="GridCell.Tab.1.left" timestamp="1632728838780">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="229" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632728838780" />
+    <state width="1877" height="229" key="GridCell.Tab.1.right" timestamp="1632728838780">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="229" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632728838780" />
+    <state x="463" y="165" key="SettingsEditor" timestamp="1628578097186">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="463" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1628578097186" />
+    <state width="960" height="523" key="XDebugger.FullValuePopup" timestamp="1632652388384">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="960" height="523" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1632652388384" />
+    <state x="652" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1631678762688">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="652" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1631678762688" />
+    <state x="647" y="275" width="727" height="490" key="find.popup" timestamp="1632706752945">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="647" y="275" width="727" height="490" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1632706752945" />
+    <state x="623" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1630573741636">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1630573741636" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fy_rabc_sys/sys_models/model_resource.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fy_rabc_sys/sys_admin/admin_user_role.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fy_rabc_sys/sys_views/v_res.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="181" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Python.DjangoServer">
+        <watch expression="request.path" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/fy_rabc$sys_comm.coverage" NAME="sys_comm Coverage Results" MODIFIED="1629176566299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fy_rabc/common" />
+    <SUITE FILE_PATH="coverage/fy_rabc$s_res.coverage" NAME="s_res Coverage Results" MODIFIED="1629878906300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fy_rabc_sys/sys_service" />
+    <SUITE FILE_PATH="coverage/fy_rabc$PermissionManage.coverage" NAME="PermissionManage Coverage Results" MODIFIED="1628823653024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fy_rabc" />
+  </component>
+</project>

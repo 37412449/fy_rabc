@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../static/js/vue.min.js"></script>
+    <script type="text/javascript" src="../static/el/el-tree.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/el/el-tree.css">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <el-tree
+            :data="data"
+            :props="props"
+            :load="loadNode"
+            show-checkbox
+            default-expand-all
+            @check-change="handleCheckChange">
+    </el-tree>
+</div>
+</body>
+<script type="text/javascript" language="JavaScript">
+    var Main = {
+        data() {
+            return {
+                props: {
+                    label: 'name',
+                    children: 'children'
+                },
+                data: [{name: '富元证券', children: [{name: '科技研发部', children: [{name: '大数据开发组'}]}, {name: '市场营销部'}]}],
+                count: 1
+            };
+        },
+        methods: {
+            handleCheckChange(data, checked, indeterminate) {
+                console.log(data, checked, indeterminate);
+            },
+            handleNodeClick(data) {
+                console.log(data);
+            },
+
+            /*
+            loadNode(node, resolve) {
+                if (node.level === 0) {
+                    return resolve([{name: 'region1'}, {name: 'region2'}]);
+                }
+                if (node.level > 3) return resolve([]);
+
+                var hasChild;
+                if (node.data.name === 'region1') {
+                    hasChild = true;
+                } else if (node.data.name === 'region2') {
+                    hasChild = false;
+                } else {
+                    hasChild = Math.random() > 0.5;
+                }
+                setTimeout(() => {
+                    var data;
+                    if (hasChild) {
+                        data = [{
+                            name: 'zone' + this.count++
+                        }, {
+                            name: 'zone' + this.count++
+                        }];
+                    } else {
+                        data = [];
+                    }
+
+                    resolve(data);
+                }, 500);
+            }
+            */
+            loadNode(node, resolve) {
+            }
+        }
+    };
+    var Ctor = Vue.extend(Main);
+    new Ctor().$mount('#app');
+</script>
+</html>

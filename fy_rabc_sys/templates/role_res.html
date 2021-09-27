@@ -1,0 +1,62 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+{% block content %}
+    <script type="text/javascript" src="{% static 'js/common.js' %}"></script>
+    <script language="JavaScript" type="text/javascript">
+        var _resTreeData = '';
+
+        // DTL模板中默认已经开启了自动转义,使用autoescape off 关闭
+        {% autoescape off %}
+            _resTreeData = {{ restree }};
+        {% endautoescape %}
+
+        var cssArr = ['el/el-tree.css', 'css/sys/role_res.css', 'el/el-tree.js', 'js/axios.min.js'];
+        createJC(cssArr);
+    </script>
+
+    <!-- 载入自定义模板过滤器 -->
+    {% load sysfilter %}
+    <div class="actions">
+        <div class="div_left">
+            <el-input ref="txtsear" v-model="rolsea" placeholder="请输入搜索内容" size="small" class="txt-rol"
+                      @input="searitem"></el-input>
+            <div class="div-rol">
+                <p></p>
+                <div v-for="rl in roles" :key="rl.rolcode" style="padding: 8px 0;cursor: pointer;"
+                     :class="{'div-data-bg': rl.rolcode == activateCode}"
+                     v-html="rl.rolname" @click="setSelNode($event,rl.rolcode)">
+                </div>
+            </div>
+        </div>
+        <div class="div_right">
+            <div class="div_msg" v-html="msg"></div>
+            <div class="div_tree">
+                <el-tree ref="eltree"
+                         node-key="id"
+                         :data="treedata"
+                         :props="props"
+                         :show-checkbox="true"
+                         :default-expanded-keys="expKeys"
+                         @node-click="handleNodeClick"
+                         :expand-on-click-node="false">
+                </el-tree>
+            </div>
+            <div style="text-align: right;">
+                <br>
+                <br>
+                {% if has_change_permission %}
+                    <el-button size="small" icon="el-icon-circle-check" type="success" :disabled="disSave"
+                               style="margin-right: 20px;" @click="ressave"> {{ 'Save'|customtrans }}</el-button>
+                {% endif %}
+                <el-button size="small" type="info" icon="el-icon-plus" @click="cancleSetValue" :disabled="disCancle">
+                    {{ 'Cancle'|customtrans }}
+                </el-button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" language="JavaScript">
+        cssArr = ['js/sys/role_res.js'];
+        createJC(cssArr);
+    </script>
+
+{% endblock %}

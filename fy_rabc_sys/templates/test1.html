@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        html {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+</body>
+<script language="JavaScript" type="text/javascript">
+    _orgTreeData = [{
+        'id': -1,
+        'orgname': '富元证券',
+        'chilorg': [{
+            'id': 1,
+            'orgname': 'IT部',
+            'chilorg': [{
+                'id': 2,
+                'orgname': '运维组',
+                'chilorg': [{'id': 3, 'orgname': '系统管理员', 'orgtype': 'P', 'status': 1, 'remark': ''}, {
+                    'id': 4,
+                    'orgname': 'Java开发工程师',
+                    'orgtype': 'P',
+                    'status': 0,
+                    'remark': ''
+                }],
+                'orgtype': 'G',
+                'status': 1,
+                'remark': ''
+            }, {'id': 5, 'orgname': 'CUBP后台开发组', 'chilorg': [], 'orgtype': 'G', 'status': 0, 'remark': ''}],
+            'orgtype': 'D',
+            'status': 1,
+            'remark': ''
+        }],
+        'orgtype': 'C',
+        'status': 1,
+        'remark': ''
+    }];
+    var findNodes = [];
+
+    function searcNode(node) {
+        for (var i in node) {
+            if (node[i].status == 0) {
+                findNodes.push(node[i].id);
+            }
+
+            if (node[i].chilorg != null && node[i].chilorg != undefined && node[i].chilorg.length > 0) {
+                searcNode(node[i].chilorg);
+            }
+        }
+    }
+
+    searcNode(_orgTreeData);
+    alert(findNodes);
+</script>
+</html>

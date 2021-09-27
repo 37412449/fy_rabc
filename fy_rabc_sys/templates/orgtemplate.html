@@ -1,0 +1,12 @@
+{% load sysfilter %}　
+<li>
+    <input type="checkbox" id="cb_{{ node.id }}" name="chkbox">
+    <span id="org_{{ node.id }}" class="folder">{{ node.org_name }}</span>
+    {% if node.id|suborg %}
+        <ul>
+            {% for node in node.id|suborg %}
+                {% include "orgtemplate.html" %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+</li>

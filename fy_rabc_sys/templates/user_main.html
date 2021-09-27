@@ -1,0 +1,184 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+{% block content %}
+    <script type="text/javascript" src="{% static 'js/axios.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/common.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/datacheck.js' %}"></script>
+    <script language="JavaScript" type="text/javascript">
+        var cssArr = ['el/el-tree.css', 'css/sys/user.css', 'el/el-tree.js'];
+        createJC(cssArr);
+    </script>
+
+
+    <!-- 载入自定义模板过滤器 -->
+    {% load sysfilter %}
+    <div class="div_tree">
+        <div id="usrTree">
+            <el-alert
+                    title="用户节点可以进行拖拽调动！"
+                    type="warning"
+                    effect="light">
+            </el-alert>
+            <el-tree ref="eltree"
+                     node-key="id"
+                     :data="treedata"
+                     :props="props"
+                     :highlight-current="true"
+                     :default-expanded-keys="expKeys"
+                     @node-click="handleNodeClick"
+                     :expand-on-click-node="false"
+                     @node-drag-start="handleDragStart"
+                     @node-drag-enter="handleDragEnter"
+                     @node-drag-leave="handleDragLeave"
+                     @node-drag-over="handleDragOver"
+                     @node-drag-end="handleDragEnd"
+                     @node-drop="handleDrop"
+                     draggable
+                     :allow-drop="allowDrop"
+                     :allow-drag="allowDrag">
+            </el-tree>
+        </div>
+        <div id="divHidden">
+            <input type="hidden" v-model:value="usrnodevalue">
+        </div>
+    </div>
+    <div class="actions">
+        <div class="div_right">
+            <div class="div_btn_top">
+                {% if has_add_permission %}
+                    <el-button size="small" type="info" icon="el-icon-plus" @click="addControl" :disabled="disAdd">
+                        {{ 'Add'|customtrans }}
+                    </el-button>
+                {% endif %}
+                {% if has_change_permission %}
+                    <el-button size="small" type="info" icon="el-icon-plus" @click="updateControl"
+                               :disabled="disUpdate">
+                        {{ 'Update'|customtrans }}
+                    </el-button>
+                {% endif %}
+                {% if has_delete_permission %}
+                    <el-button size="small" type="info" icon="el-icon-plus" @click="deleteUsr"
+                               :disabled="disDelete">
+                        {{ 'Delete'|customtrans }}
+                    </el-button>
+                {% endif %}
+                <el-button size="small" type="info" icon="el-icon-plus" @click="cancleSetValue" :disabled="disCancle">
+                    {{ 'Cancle'|customtrans }}
+                </el-button>
+            </div>
+            <div class="div_usr_content">
+                <div class="div_msg" v-html="msg"></div>
+                <el-collapse v-model="activeName" accordion="accFlag">
+                    <el-collapse-item title="{{ 'SettingUser'|customtrans }}" name="usrDetail">
+                        <el-form ref="myForm" :model="form" label-width="100px" :disabled="disForm" :rules="rules">
+                            <el-row>
+                                <el-col span="12">
+                                    <el-form-item label="{{ 'Name'|customtrans }}" class="el_itemhegiht"
+                                                  prop="user_name">
+                                        <el-input v-model="form.user_name" size="small" class="el_inputwidth"
+                                                  @change="auto_change_py" maxlength="20"></el-input>
+                                    </el-form-item>
+                                </el-col>
+                                <el-col span="12">
+                                    <el-form-item label="{{ 'LoginName'|customtrans }}" class="el_itemhegiht"
+                                                  prop="login_name">
+                                        <el-input v-model="form.login_name" size="small" class="el_inputwidth"
+                                                  maxlength="20"
+                                                  :disabled="disLogName" ref="txtLoginName"
+                                        ></el-input>
+                                    </el-form-item>
+                                </el-col>
+                            </el-row>
+                            <el-row>
+                                <el-col span="12">
+                                    <el-form-item label="{{ 'NickName'|customtrans }}" class="el_itemhegiht">
+                                        <el-input v-model="form.nick_name" size="small" class="el_inputwidth"
+                                                  maxlength="20"></el-input>
+                                    </el-form-item>
+                                </el-col>
+                                <el-col span="12">
+                                    <el-form-item label="{{ 'Gender'|customtrans }}" class="el_itemhegiht"
+                                                  prop="gender">
+                                        <el-select v-model="form.gender" size="small" class="el_inputwidth"
+                                                   placeholder="请选择性别">
+                                            <el-option :value="sta.id" v-for="sta in form.genders"
+                                                       :label={{ "sta.name"|customtrans }}></el-option>
+                                        </el-select>
+                                    </el-form-item>
+                                </el-col>
+                            </el-row>
+                            <el-row>
+                                <el-col span="12">
+                                    <el-form-item label="{{ 'IDCard'|customtrans }}" class="el_itemhegiht"
+                                                  prop="id_num">
+                                        <el-input v-model="form.id_num" size="small" class="el_inputwidth"
+                                                  maxlength="18"></el-input>
+                                    </el-form-item>
+                                </el-col>
+                                <el-col span="12">
+                                    <el-form-item label="{{ 'PhoneNo'|customtrans }}" class="el_itemhegiht" prop="tel">
+                                        <el-input v-model="form.tel" size="small" class="el_inputwidth"
+                                                  maxlength="20"></el-input>
+                                    </el-form-item>
+                                </el-col>
+                            </el-row>
+                            <el-row>
+                                <el-col span="12">
+                                    <el-form-item label="{{ 'Email'|customtrans }}" class="el_itemhegiht" prop="email">
+                                        <el-input v-model="form.email" size="small" class="el_inputwidth"
+                                                  maxlength="20"></el-input>
+                                    </el-form-item>
+                                </el-col>
+                                <el-col span="12">
+                                    <el-form-item label="{{ 'Status'|customtrans }}" class="el_itemhegiht">
+                                        <el-select v-model="form.status" size="small" class="el_inputwidth">
+                                            <el-option :value="sta.id" v-for="sta in form.usrstatus"
+                                                       :label={{ "sta.name"|customtrans }}></el-option>
+                                        </el-select>
+                                    </el-form-item>
+                                </el-col>
+                            </el-row>
+                            <el-row>
+                                <el-col span="24">
+                                    <el-form-item label="{{ 'Remarks'|customtrans }}" class="el_itemhegiht">
+                                        <el-input type="textarea" v-model="form.remark" style="width: 380px"
+                                                  maxlength="50"></el-input>
+                                    </el-form-item>
+                                </el-col>
+                            </el-row>
+                        </el-form>
+                    </el-collapse-item>
+                    <el-collapse-item title="{{ 'SettingRole'|customtrans }}" name="roles">
+                        <el-transfer
+                                filterable
+                                :filter-method="filterMethod"
+                                filter-placeholder="请输入角色名称"
+                                :titles="['可选角色', '已选角色']"
+                                v-model="filValue"
+                                :data="filData">
+                        </el-transfer>
+                    </el-collapse-item>
+                </el-collapse>
+                <div style="text-align: right;">
+                    <br>
+                    <br>
+                    <br>
+                    <el-button size="small" icon="el-icon-circle-check" type="success" :disabled="disSave"
+                               @click="usrsave"> {{ 'Save'|customtrans }}</el-button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" language="JavaScript">
+        var _usrTreeData = '';
+
+        // DTL模板中默认已经开启了自动转义,使用autoescape off 关闭
+        {% autoescape off %}
+            _usrTreeData = {{ usrtree }};
+        {% endautoescape %}
+
+        cssArr = ['js/sys/user.js'];
+        createJC(cssArr);
+    </script>
+
+{% endblock %}

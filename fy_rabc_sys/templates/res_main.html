@@ -1,0 +1,127 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+{% block content %}
+    <script type="text/javascript" src="{% static 'js/common.js' %}"></script>
+    <script language="JavaScript" type="text/javascript">
+        var cssArr = ['el/el-tree.css', 'css/sys/res.css', 'el/el-tree.js', 'js/axios.min.js'];
+        createJC(cssArr);
+    </script>
+
+    <!-- 载入自定义模板过滤器 -->
+    {% load sysfilter %}
+    <div class="div_tree">
+        <div id="resTree">
+            <el-tree ref="eltree"
+                     node-key="id"
+                     :data="treedata"
+                     :props="props"
+                     :highlight-current="true"
+                     :default-expanded-keys="expKeys"
+                     @node-click="handleNodeClick"
+                     :expand-on-click-node="false">
+            </el-tree>
+        </div>
+        <div id="divHidden">
+            <input type="hidden" v-model:value="resnodevalue">
+            <el-dialog
+                    title="{{ 'Tips'|customtrans }}"
+                    :visible.sync="dialogVisible"
+                    width="30%"
+                    :before-close="handleClose">
+                <span v-html="infos"></span>
+                <span slot="footer" class="dialog-footer">
+                    <el-button type="primary" @click="dialogVisible = false">{{ 'Confirm'|customtrans }}</el-button>
+                </span>
+            </el-dialog>
+        </div>
+    </div>
+    <div class="actions">
+        <div class="div_right">
+            <div class="div_btn_top">
+                {% if has_add_permission %}
+                    <el-button size="small" type="info" icon="el-icon-plus" @click="addControl" :disabled="disAdd">
+                        {{ 'Add'|customtrans }}
+                    </el-button>
+                {% endif %}
+                {% if has_change_permission %}
+                    <el-button size="small" type="info" icon="el-icon-plus" @click="updateControl"
+                               :disabled="disUpdate">
+                        {{ 'Update'|customtrans }}
+                    </el-button>
+                {% endif %}
+                {% if has_delete_permission %}
+                    <el-button size="small" type="info" icon="el-icon-plus" @click="deleteRes"
+                               :disabled="disDelete">
+                        {{ 'Delete'|customtrans }}
+                    </el-button>
+                {% endif %}
+                <el-button size="small" type="info" icon="el-icon-plus" @click="cancleSetValue" :disabled="disCancle">
+                    {{ 'Cancle'|customtrans }}
+                </el-button>
+
+            </div>
+            <div class="div_res_content">
+                <div class="div_msg" v-html="msg"></div>
+
+                <el-form ref="myForm" :model="form" label-width="100px" :disabled="disForm" :rules="rules">
+                    <el-form-item label="{{ 'ObjType'|customtrans }}" class="el_itemhegiht" prop="resselected">
+                        <el-select v-model="form.resselected" @change="getResSelected" size="small"
+                                   class="el_inputwidth" :disabled="form.disResType" placeholder="请选择类型">
+                            <el-option :value="res.id" v-for="res in form.restypes" :label={{ "res.name"|customtrans }}>
+                            </el-option>
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item label="{{ 'ObjName'|customtrans }}" class="el_itemhegiht" prop="resname">
+                        <el-row size="small" class="el_inputwidth">
+                            <el-col :span="12">
+                                <el-autocomplete ref="txtResName" v-model="form.resname"
+                                                 :fetch-suggestions="querySearch" size="small"
+                                                 class="el_inputwidth" placeholder="请输名称" @select="handleSelect"
+                                                 maxlength="20">
+                                </el-autocomplete>
+                            </el-col>
+                        </el-row>
+                    </el-form-item>
+                    <el-form-item label="{{ 'ObjValue'|customtrans }}" class="el_itemhegiht">
+                        <el-input ref="txtResValue" v-model="form.resvalue" size="small"
+                                  class="el_inputwidth" maxlength="200"></el-input>
+                    </el-form-item>
+                    <el-form-item label="{{ 'Status'|customtrans }}" class="el_itemhegiht">
+                        <el-select v-model="form.staselected" size="small" class="el_inputwidth">
+                            <el-option :value="sta.id" v-for="sta in form.resstatus"
+                                       :label={{ "sta.name"|customtrans }}></el-option>
+                        </el-select>
+                    </el-form-item>
+
+                    <el-form-item label="{{ 'Remarks'|customtrans }}" class="el_itemhegiht">
+                        <el-input type="textarea" v-model="form.resremark"></el-input>
+                    </el-form-item>
+                </el-form>
+                <div style="text-align: right;">
+                    <br>
+                    <br>
+                    <br>
+                    <el-button size="small" icon="el-icon-circle-check" type="success" :disabled="disSave"
+                               style="margin-right: 20px;"
+                               @click="ressave"> {{ 'Save'|customtrans }}</el-button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" language="JavaScript">
+        var _resTreeData = '';
+        var _resActions = '';
+
+        // DTL模板中默认已经开启了自动转义,使用autoescape off 关闭
+        {% autoescape off %}
+            _resTreeData = {{ restree }};
+            _resActions = {{ actions }}
+        {% endautoescape %}
+
+        cssArr = ['js/sys/res.js'];
+        createJC(cssArr);
+    </script>
+
+{% endblock %}

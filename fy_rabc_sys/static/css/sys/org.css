@@ -1,0 +1,59 @@
+.el_inputwidth {
+    width: 240px;
+}
+
+.el_itemhegiht {
+    height: 35px;
+}
+
+.div_tree {
+    width: 20%;
+    border-right: 1px solid #D8D8D8;
+    height: 750px;
+    overflow: auto;
+    float: left;
+}
+
+.div_right {
+    max-height: 750px;
+    float: left;
+}
+
+.div_btn_top {
+    height: 40px;
+    width: 100%;
+    margin-top: 5px;
+    margin-left: 20px;
+    float: top;
+}
+
+.div_org_content {
+    margin-top: 5px;
+    float: top;
+    height: 670px;
+    text-align: left;
+    width: 600px;
+}
+
+.div_msg {
+    height: 20px;
+    color: red;
+    float: top;
+    padding-left: 65px;
+    border: none;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    overflow: auto;
+}
+
+.txt_org_name {
+    width: 280px;
+    height: 32px;
+    border: gainsboro 1px solid;
+}
+
+.txt_org_remaik {
+    width: 450px;
+    border: gainsboro 1px solid;
+}

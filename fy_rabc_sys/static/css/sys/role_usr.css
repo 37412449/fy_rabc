@@ -1,0 +1,67 @@
+.div_left {
+    width: 290px;
+    border-right: 1px solid #D8D8D8;
+    height: 750px;
+    overflow: auto;
+    float: left;
+    padding-left: 20px;
+}
+
+.div_right {
+    height: 750px;
+    float: left;
+}
+
+.div_msg {
+    height: 20px;
+    color: red;
+    float: top;
+    padding-left: 65px;
+    border: none;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    overflow: auto;
+}
+
+.div_tree {
+    margin-top: 5px;
+    margin-left: 20px;
+    float: top;
+    height: 640px;
+    text-align: left;
+    width: 600px;
+    overflow: auto;
+}
+
+.txt-rol {
+    width: 80%;
+}
+
+.div-rol {
+    border: lightgray inset 1px;
+    text-align: center;
+    width: 80%;
+    border-radius: 5px;
+    height: 630px;
+    overflow: auto;
+    float: top;
+    margin-top: 10px;
+}
+
+.div-data-text {
+    font-size: 12px;
+}
+
+.div-data-item {
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+.div-data-bg {
+    background-color: #9bd4ff;
+}
+
+.box-card {
+    width: 480px;
+}

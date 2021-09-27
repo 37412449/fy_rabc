@@ -1,0 +1,39 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'jquery/jquery.treeview.css' %}">
+    <script type="text/javascript" src="{% static 'jquery/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery/jquery.treeview.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jquery/jquery.cookie.js' %}"></script>
+    <!-- 载入自定义模板过滤器 -->
+    {% load sysfilter %}
+    <div style="width: 30%; border-right: 1px solid #D8D8D8; min-height: 300px; overflow: auto; float: left">
+        <ul id="orgtree" class="filetree">
+            <li>
+                <input type="checkbox" id="cb_{{ cm.id }}" name="chkbox">
+                <span id="org_{{ cm.id }}" class="folder">{{ cm.short_name }}</span>
+                {% if None|suborg %}　　
+                    <ul>
+                        {% for node in None|suborg %}
+                            {% include "orgtemplate.html" %}
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript" language="JavaScript">
+        $('#orgtree').treeview(
+            {
+                animated: "fast",    //快速动画
+                collapsed: true,      //开始时设为折叠的
+                unique: true,
+                persist: "cookie",    //基于cookie的持久性
+                toggle: function () {
+                    window.console && console.log("%o was toggled", this);
+                }
+            }
+        );
+    </script>
+
+{% endblock %}
