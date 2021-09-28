@@ -126,7 +126,7 @@ AUTH_PASSWORD_VALIDATORS = [
 SIMPLEUI_INDEX = '/admin'
 
 # 首页标题
-SIMPLEUI_HOME_TITLE = '富元证券--权限管理'
+SIMPLEUI_HOME_TITLE = 'CRM'
 
 # 自定义SIMPLEUI的Logo
 SIMPLEUI_LOGO = '../../static/img/fyhq.png'
