@@ -422,7 +422,7 @@ CREATE TABLE `t_sys_company`  (
 -- ----------------------------
 -- Records of t_sys_company
 -- ----------------------------
-INSERT INTO `t_sys_company` VALUES (1, 'CP-546E4-152E-11EC-B7DD-94C691099607', '联想中国', '联想(北京)有限公司', NULL, NULL, NULL, NULL, 1, 'admin', '2021-09-14 15:37:22', NULL, '2021-09-14 15:37:22', NULL);
+INSERT INTO `t_sys_company` VALUES (1, 'CP-546E4-152E-11EC-B7DD-94C691099607', '谷歌中国', '谷歌信息技术（中国）有限公司', NULL, NULL, NULL, NULL, 1, 'admin', '2021-09-14 15:37:22', NULL, '2021-09-14 15:37:22', NULL);
 
 -- ----------------------------
 -- Table structure for t_sys_config

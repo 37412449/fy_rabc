@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd69a120-4bf0-49b9-ad72-0c2ece949e60" name="Default Changelist" comment="" />
+    <list default="true" id="bd69a120-4bf0-49b9-ad72-0c2ece949e60" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/createDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/createDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc_sys/static/img/fy.ico" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/static/img/fy.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc_sys/static/img/fyhq.png" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/static/img/fyhq.png" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +27,18 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\fy_rabc\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1wWayf5rMd1m4CYn48OOAdVe9io" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -30,6 +48,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/simpleui/static/admin/js/vendor/xregexp" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -179,7 +198,7 @@
       <workItem from="1630576141175" duration="146039000" />
       <workItem from="1631601304054" duration="13071000" />
       <workItem from="1631677939050" duration="6370000" />
-      <workItem from="1632273788285" duration="105065000" />
+      <workItem from="1632273788285" duration="107304000" />
     </task>
     <servers />
   </component>
