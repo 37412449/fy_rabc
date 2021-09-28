@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd69a120-4bf0-49b9-ad72-0c2ece949e60" name="Default Changelist" comment="logo">
+    <list default="true" id="bd69a120-4bf0-49b9-ad72-0c2ece949e60" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fy_rabc/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,9 +167,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.sys_comm" />
+        <item itemvalue="Python.s_res" />
+        <item itemvalue="Python.PermissionManage" />
         <item itemvalue="Python.s_res" />
         <item itemvalue="Python.sys_comm" />
-        <item itemvalue="Python.PermissionManage" />
       </list>
     </recent_temporary>
   </component>
@@ -295,10 +296,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632278974428" />
-    <state x="572" y="117" key="CommitChangelistDialog2" timestamp="1632811020509">
+    <state x="572" y="117" key="CommitChangelistDialog2" timestamp="1632826506411">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="572" y="117" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1632811020509" />
+    <state x="572" y="117" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1632826506411" />
     <state width="1276" height="714" key="DebuggerActiveHint" timestamp="1632730943658">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -347,6 +348,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="463" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1632805472064" />
+    <state x="700" y="226" key="VCS.ChangeListViewerDialog" timestamp="1632826565687">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="700" y="226" key="VCS.ChangeListViewerDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632826565687" />
     <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1632824649741">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -375,6 +380,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="749" y="322" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632824675199" />
+    <state x="606" y="385" key="git4idea.ui.GitUnstashDialog" timestamp="1632826607792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="606" y="385" key="git4idea.ui.GitUnstashDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632826607792" />
     <state x="623" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1630573741636">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
