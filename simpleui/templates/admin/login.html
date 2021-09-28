@@ -16,8 +16,10 @@
         <title>{{ site_title }}-{% trans 'Log in' %}</title>
     {% endblock %}
     {% block icon %}
-        {#        <link rel="icon" href="{% static 'admin/simpleui-x/img/favicon.png' %}">#}
-        <link rel="shortcut icon" href="/static/admin/simpleui-x/img/fy.ico"/>
+        {#        <link rel="icon" href="{% static 'admin/simpleui-x/img/favicon.png' %}"> #}
+        {% if "CUSTOM_ICON"|get_config %}
+            <link rel="icon" href="{{ "CUSTOM_ICON"|get_config |safe }}">
+        {% endif %}
     {% endblock %}
 
     {% include 'admin/includes/css-part.html' %}

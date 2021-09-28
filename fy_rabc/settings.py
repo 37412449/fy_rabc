@@ -131,6 +131,9 @@ SIMPLEUI_HOME_TITLE = '富元证券--权限管理'
 # 自定义SIMPLEUI的Logo
 SIMPLEUI_LOGO = '../../static/img/fyhq.png'
 
+# 自定义ICON
+CUSTOM_ICON = '../../static/img/fy.ico'
+
 # 服务器信息
 SIMPLEUI_HOME_INFO = False
 

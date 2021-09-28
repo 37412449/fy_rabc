@@ -5,7 +5,7 @@ cm = CompanyModel.objects.values('short_name').filter(status=1)
 if cm and len(cm) >= 1:
     admin.site.site_header = cm[0]['short_name']
 else:
-    admin.site.site_header = '富元证券'
+    admin.site.site_header = '谷歌中国'
 
 admin.site.site_title = '权限管理系统'
 admin.site.index_title = '权限管理系统'
