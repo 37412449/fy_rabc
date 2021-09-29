@@ -15,6 +15,22 @@ class RolResView(SysView):
         return render(request, 'role_res.html', {"restree": resTree})
 
 
+class GetResTree(SysView):
+
+    def post(self, request):
+        restree = []
+        try:
+            rs = ResServic()
+            restree = rs.getResTree()
+            flag = 1
+            msg = '获取成功'
+        except Exception as e:
+            flag = -1
+            msg = '获取资源树异常:' + str(e)
+        return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'restree': restree}),
+                            content_type="application/json");
+
+
 class GetAllRoles(SysView):
     __rrs = RoleResService()
 
@@ -26,7 +42,7 @@ class GetAllRoles(SysView):
             flag, msg, lisRoles = self.__rrs.getAllRoles()
         except Exception as e:
             print(str(e))
-        return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'roles': lisRoles}), content_type="application/json");
+        return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'roles': lisRoles}), content_type="application/json")
 
 
 class GetRoleAllRes(SysView):
@@ -42,7 +58,7 @@ class GetRoleAllRes(SysView):
             flag, msg, lisUsers = self.__rrs.getRoleAllRes(jsData['rolecode'])
         except Exception as e:
             print(str(e))
-        return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'ress': lisUsers}), content_type="application/json");
+        return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'ress': lisUsers}), content_type="application/json")
 
 
 class SaveRolRes(SysView):
@@ -55,4 +71,4 @@ class SaveRolRes(SysView):
             flag, msg = self.__rrs.saveRolRes(request, request.user.username)
         except Exception as e:
             print(str(e))
-        return HttpResponse(json.dumps({'code': flag, 'msg': msg}), content_type="application/json");
+        return HttpResponse(json.dumps({'code': flag, 'msg': msg}), content_type="application/json")
