@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="bd69a120-4bf0-49b9-ad72-0c2ece949e60" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/createDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/createDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc/common/sys_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc/common/sys_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc_sys/static/css/sys/role_res.css" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/static/css/sys/role_res.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc_sys/static/css/sys/role_usr.css" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/static/css/sys/role_usr.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc_sys/static/js/sys/role_res.js" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/static/js/sys/role_res.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc_sys/static/js/sys/role_usr.js" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/static/js/sys/role_usr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc_sys/templates/role_res.html" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/templates/role_res.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc_sys/templates/role_usr.html" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/templates/role_usr.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,10 +167,10 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.PermissionManage" />
-      <item itemvalue="Python.s_res" />
-      <item itemvalue="Python.sys_comm" />
       <item itemvalue="Django server.fy_rabc" />
+      <item itemvalue="Python.PermissionManage" />
+      <item itemvalue="Python.sys_comm" />
+      <item itemvalue="Python.s_res" />
     </list>
     <recent_temporary>
       <list>
@@ -276,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632826890544</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="sql">
+      <created>1632881487175</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1632881487175</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,7 +321,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="logo" />
     <MESSAGE value="tt" />
-    <option name="LAST_COMMIT_MESSAGE" value="tt" />
+    <MESSAGE value="sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="sql" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="181" key="#Notifications" timestamp="1632807840131">
@@ -319,10 +333,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632278974428" />
-    <state x="572" y="117" key="CommitChangelistDialog2" timestamp="1632826889361">
+    <state x="572" y="117" key="CommitChangelistDialog2" timestamp="1632881486081">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="572" y="117" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1632826889361" />
+    <state x="572" y="117" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1632881486081" />
     <state width="1276" height="714" key="DebuggerActiveHint" timestamp="1632730943658">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -375,10 +389,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="700" y="226" key="VCS.ChangeListViewerDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632826565687" />
-    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1632827125559">
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1632883466298">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1632827125559" />
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1632883466298" />
     <state width="960" height="523" key="XDebugger.FullValuePopup" timestamp="1632652388384">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

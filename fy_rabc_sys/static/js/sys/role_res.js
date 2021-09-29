@@ -31,7 +31,7 @@ var fun_selRole = function (rolcode) {
 
 };
 
-var fun_getAllRoles = function () {
+var fun_getAllRoles = function (roles) {
     $.ajax({
         type: "post",
         dataType: "json",
@@ -52,6 +52,11 @@ var fun_getAllRoles = function () {
             _action.disSave = true;
             _action.disCancle = true;
         }
+    });
+    roles.length = 0;
+    _allRoles.forEach((rol, i) => {
+        roles.push({rolname: rol.name, rolcode: rol.code});
+
     });
 };
 
@@ -81,16 +86,16 @@ var _action = new Vue({
             }
             this.expKeys = exArr;
         }
-        fun_getAllRoles();
-
-        _allRoles.forEach((rol, i) => {
-            this.roles.push({rolname: rol.name, rolcode: rol.code});
-
-        });
+        fun_getAllRoles(this.roles);
     },
     methods: {
         handleNodeClick(data) {
             // console.log(data);
+        },
+        freshRoles() {
+            this.rolsea = '';
+            fun_getAllRoles(this.roles);
+            this.disSave = true;
         },
         ressave() {
             if (_selRoleValue == null) {

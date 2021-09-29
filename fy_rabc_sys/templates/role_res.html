@@ -20,6 +20,8 @@
         <div class="div_left">
             <el-input ref="txtsear" v-model="rolsea" placeholder="请输入搜索内容" size="small" class="txt-rol"
                       @input="searitem"></el-input>
+            <el-button size="mini" icon="el-icon-refresh" title="{{ 'Refresh'|customtrans }}" type="primary"
+                       @click="freshRoles"></el-button>
             <div class="div-rol">
                 <p></p>
                 <div v-for="rl in roles" :key="rl.rolcode" style="padding: 8px 0;cursor: pointer;"
