@@ -50,6 +50,7 @@ urlpatterns = [
     path(rol_path + r'_all', GetRoles.as_view()),
     path(rol_path + r'_all_usr', getRoleUsers.as_view()),
     path(rol_path + r'_save_usr', saveUsrRol.as_view()),
+    path(rol_path + r'_usr_tree', GetUsrTree.as_view()),
 
     # 角色资源 v_rol_res
     path(r2r_path, RolResView.as_view()),

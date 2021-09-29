@@ -23,7 +23,7 @@ class GetResTree(SysView):
             rs = ResServic()
             restree = rs.getResTree()
             flag = 1
-            msg = '获取成功'
+            msg = '获取资源成功'
         except Exception as e:
             flag = -1
             msg = '获取资源树异常:' + str(e)

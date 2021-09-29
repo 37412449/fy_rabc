@@ -14,6 +14,22 @@ class RolUsrView(SysView):
         return render(request, 'role_usr.html', {"usrtree": usrTree})
 
 
+class GetUsrTree(SysView):
+
+    def post(self, request):
+        restree = []
+        try:
+            us = UsrService()
+            usrtree = us.getUsrTree()
+            flag = 1
+            msg = '获取用户树成功'
+        except Exception as e:
+            flag = -1
+            msg = '获取用户树异常:' + str(e)
+        return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'usrtree': usrtree}),
+                            content_type="application/json");
+
+
 class GetRoles(SysView):
     __rus = RoleUserService()
 

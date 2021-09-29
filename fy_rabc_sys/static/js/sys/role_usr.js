@@ -59,6 +59,30 @@ var fun_getAllRoles = function (roles) {
     });
 };
 
+var fun_getUsrTree = function () {
+    $.ajax({
+        type: "post",
+        dataType: "json",
+        async: false,
+        url: '/sys/rol_usr_tree',
+        data: JSON.stringify({'optype': 'view'}),
+        headers: {'Content-Type': 'application/json'},
+        error: function (xhr, err) {
+            _action.msg = '请求失败，请检查，' + err + '!';
+        },
+        success: function (data) {
+            if (data['code'] == 1) {
+                _usrTreeData = data['usrtree'];
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            alert('获取用户树异常！');
+            _action.disSave = true;
+            _action.disCancle = true;
+        }
+    });
+};
+
 var _action = new Vue({
     el: '.actions',
     data: {
@@ -95,6 +119,8 @@ var _action = new Vue({
         freshRoles() {
             this.rolsea = '';
             fun_getAllRoles(this.roles);
+            fun_getUsrTree();
+            this.treedata = _usrTreeData;
             this.disSave = true;
         },
         orgsave() {
