@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd69a120-4bf0-49b9-ad72-0c2ece949e60" name="Default Changelist" comment="logo">
+    <list default="true" id="bd69a120-4bf0-49b9-ad72-0c2ece949e60" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fy_rabc/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/createDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/createDB.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -161,16 +161,18 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Django server.fy_rabc" />
       <item itemvalue="Python.PermissionManage" />
-      <item itemvalue="Python.sys_comm" />
       <item itemvalue="Python.s_res" />
+      <item itemvalue="Python.sys_comm" />
+      <item itemvalue="Django server.fy_rabc" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.sys_comm" />
+        <item itemvalue="Python.s_res" />
+        <item itemvalue="Python.PermissionManage" />
         <item itemvalue="Python.s_res" />
         <item itemvalue="Python.sys_comm" />
-        <item itemvalue="Python.PermissionManage" />
       </list>
     </recent_temporary>
   </component>
@@ -253,7 +255,28 @@
       <option name="project" value="LOCAL" />
       <updated>1632810755791</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="logo">
+      <created>1632826629020</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1632826629020</updated>
+    </task>
+    <task id="LOCAL-00009" summary="logo">
+      <created>1632826784013</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1632826784013</updated>
+    </task>
+    <task id="LOCAL-00010" summary="logo">
+      <created>1632826890544</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1632826890544</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +307,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="logo" />
-    <option name="LAST_COMMIT_MESSAGE" value="logo" />
+    <MESSAGE value="tt" />
+    <option name="LAST_COMMIT_MESSAGE" value="tt" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="181" key="#Notifications" timestamp="1632807840131">
@@ -295,10 +319,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632278974428" />
-    <state x="572" y="117" key="CommitChangelistDialog2" timestamp="1632811020509">
+    <state x="572" y="117" key="CommitChangelistDialog2" timestamp="1632826889361">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="572" y="117" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1632811020509" />
+    <state x="572" y="117" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1632826889361" />
     <state width="1276" height="714" key="DebuggerActiveHint" timestamp="1632730943658">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -347,10 +371,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="463" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1632805472064" />
-    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1632824649741">
+    <state x="700" y="226" key="VCS.ChangeListViewerDialog" timestamp="1632826565687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1632824649741" />
+    <state x="700" y="226" key="VCS.ChangeListViewerDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632826565687" />
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1632827125559">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1632827125559" />
     <state width="960" height="523" key="XDebugger.FullValuePopup" timestamp="1632652388384">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -371,10 +399,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="647" y="275" width="727" height="490" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1632824233578" />
-    <state x="749" y="322" key="git4idea.merge.GitMergeDialog" timestamp="1632824675199">
+    <state x="749" y="322" key="git4idea.merge.GitMergeDialog" timestamp="1632877823999">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="749" y="322" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632824675199" />
+    <state x="749" y="322" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632877823999" />
+    <state x="606" y="385" key="git4idea.ui.GitUnstashDialog" timestamp="1632826607792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="606" y="385" key="git4idea.ui.GitUnstashDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632826607792" />
     <state x="623" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1630573741636">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
