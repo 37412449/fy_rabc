@@ -56,4 +56,5 @@ urlpatterns = [
     path(r2r_path + r's', GetAllRoles.as_view()),
     path(r2r_path + r'_all_res', GetRoleAllRes.as_view()),
     path(r2r_path + r'_save_res', SaveRolRes.as_view()),
+    path(r2r_path + r'_res_tree', GetResTree.as_view()),
 ]

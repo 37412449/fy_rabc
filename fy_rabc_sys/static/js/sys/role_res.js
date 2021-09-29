@@ -60,6 +60,30 @@ var fun_getAllRoles = function (roles) {
     });
 };
 
+var fun_getResTree = function () {
+    $.ajax({
+        type: "post",
+        dataType: "json",
+        async: false,
+        url: '/sys/r2r_res_tree',
+        data: JSON.stringify({'optype': 'view'}),
+        headers: {'Content-Type': 'application/json'},
+        error: function (xhr, err) {
+            _action.msg = '请求失败，请检查，' + err + '!';
+        },
+        success: function (data) {
+            if (data['code'] == 1) {
+                _resTreeData = data['restree'];
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            alert('获取资源树异常！');
+            _action.disSave = true;
+            _action.disCancle = true;
+        }
+    });
+};
+
 var _action = new Vue({
     el: '.actions',
     data: {
@@ -95,6 +119,8 @@ var _action = new Vue({
         freshRoles() {
             this.rolsea = '';
             fun_getAllRoles(this.roles);
+            fun_getResTree();
+            this.treedata = _resTreeData;
             this.disSave = true;
         },
         ressave() {
