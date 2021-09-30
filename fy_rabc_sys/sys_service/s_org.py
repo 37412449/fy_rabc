@@ -1,7 +1,7 @@
 # !/usr/bin/env python
 # -*- coding: UTF-8 –*-
 
-
+from django.conf import settings
 from fy_rabc_sys.sys_models.model_company import CompanyModel
 from fy_rabc_sys.sys_models.model_org import OrgModel
 from fy_rabc.common.sys_comm import *
@@ -98,7 +98,7 @@ class OrgService:
                     try:
                         self.__al.log_addition(request, org, reMsg)
                     except Exception as e:
-                        print(e)
+                        settings.SYS_LOG.logger.error('saveOrg:新增组织架构日志异常：' + str(e))
                 elif optype == 'update':
                     om = OrgModel.objects.filter(id=id)
                     om.update(org_name=orgname, org_type=orgtype, status=status, updator=operator, remark=remark)
@@ -110,14 +110,14 @@ class OrgService:
                     try:
                         self.__al.log_change(request, om[0], reMsg)
                     except Exception as e:
-                        print(e)
+                        settings.SYS_LOG.logger.error('saveRes:修改组织架构日志异常：' + str(e))
             else:
                 reFlag = 0
                 reMsg = '未操作任何数据'
         except Exception as e:
             reFlag = -1
             reMsg = '操作异常：' + str(e)
-
+            settings.SYS_LOG.logger.error('saveRes:' + str(e))
         finally:
             return reFlag, reMsg, currId
 
@@ -157,7 +157,7 @@ class OrgService:
         except Exception as e:
             reFlag = -1
             reMsg = '操作异常：' + str(e)
-
+            settings.SYS_LOG.logger.error('checkOrg:' + str(e))
         finally:
             return reFlag, reMsg
 
@@ -180,9 +180,9 @@ class OrgService:
 
                 # 日志
                 try:
-                    self.__al.log_deletion(request, om[0], '删除组织机构记录,id:'+ str(orgId))
+                    self.__al.log_deletion(request, om[0], '删除组织机构记录,id:' + str(orgId))
                 except Exception as e:
-                    print(e)
+                    settings.SYS_LOG.logger.error('delOrg:删除组织机构日志异常' + str(e))
 
                 delFlag = om.delete()
                 if delFlag[0] > 0:
@@ -197,6 +197,6 @@ class OrgService:
         except Exception as e:
             reFlag = -1
             reMsg = '操作异常：' + str(e)
-
+            settings.SYS_LOG.logger.error('delOrg:' + str(e))
         finally:
             return reFlag, reMsg

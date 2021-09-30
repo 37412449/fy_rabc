@@ -2,8 +2,8 @@
 # -*- coding: UTF-8 –*-
 
 from django.contrib import admin
-import json
 
+from django.conf import settings
 from fy_rabc_sys.sys_models.model_resource import ResourceModel
 from fy_rabc.common.sys_comm import *
 from fy_rabc.common.admin_log import AdminLog
@@ -94,7 +94,7 @@ class ResServic:
                     try:
                         self.__al.log_addition(request, res, reMsg)
                     except Exception as e:
-                        print(e)
+                        settings.SYS_LOG.logger.error('saveRes:新增系统资源日志异常：' + str(e))
                 elif optype == 'update':
                     rm = ResourceModel.objects.filter(id=id)
                     rm.update(res_name=resname, res_type=restype, res_value=resvalue,
@@ -107,13 +107,14 @@ class ResServic:
                     try:
                         self.__al.log_change(request, rm[0], reMsg)
                     except Exception as e:
-                        print(e)
+                        settings.SYS_LOG.logger.error('saveRes:修改资源日志异常：' + str(e))
             else:
                 reFlag = 0
                 reMsg = '未操作任何数据'
         except Exception as e:
             reFlag = -1
             reMsg = '操作异常：' + str(e)
+            settings.SYS_LOG.logger.error('saveRes:' + str(e))
 
         finally:
             return reFlag, reMsg, currId
@@ -154,6 +155,7 @@ class ResServic:
         except Exception as e:
             reFlag = -1
             reMsg = '操作异常：' + str(e)
+            settings.SYS_LOG.logger.error('checkRes:' + str(e))
 
         finally:
             return reFlag, reMsg
@@ -179,7 +181,7 @@ class ResServic:
                 try:
                     self.__al.log_deletion(request, rm[0], '删除资源记录,id:' + str(resId))
                 except Exception as e:
-                    print(e)
+                    settings.SYS_LOG.logger.error('delRes:记录删除资源日志异常：' + str(e))
 
                 delFlag = rm.delete()
                 if delFlag[0] > 0:
@@ -194,6 +196,7 @@ class ResServic:
         except Exception as e:
             reFlag = -1
             reMsg = '操作异常：' + str(e)
+            settings.SYS_LOG.logger.error('delRes:' + str(e))
 
         finally:
             return reFlag, reMsg

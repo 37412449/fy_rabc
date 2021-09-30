@@ -5,6 +5,7 @@ import uuid
 import json
 from ast import literal_eval
 
+from django.conf import settings
 from fy_rabc.common.sys_config import *
 
 
@@ -48,7 +49,7 @@ def getConfigByMainType(mainType):
                 else:
                     rePar[p['main_type']].update(tmpDic)
     except Exception as e:
-        print(str(e))
+        settings.SYS_LOG.logger.error('getConfigByMainType:' + str(e))
     return rePar
 
 
@@ -74,5 +75,5 @@ def getConfigByName(name):
                 else:
                     rePar[p['main_type']].update(tmpDic)
     except Exception as e:
-        print(str(e))
+        settings.SYS_LOG.logger.error('getConfigByName:' + str(e))
     return rePar

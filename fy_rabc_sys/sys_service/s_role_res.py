@@ -1,8 +1,7 @@
 # !/usr/bin/env python
 # -*- coding: UTF-8 –*-
 
-import json
-
+from django.conf import settings
 from fy_rabc_sys.sys_models.model_role import RoleModel
 from fy_rabc_sys.sys_models.model_resource import ResourceModel
 from fy_rabc_sys.sys_models.model_role_res import RoleResModel
@@ -35,7 +34,7 @@ class RoleResService:
         except Exception as e:
             reFlag = -1
             reMsg = '查询失败：' + str(e)
-            print(str(e))
+            settings.SYS_LOG.logger.error('getAllRoles:' + str(e))
         finally:
             return reFlag, reMsg, reLisRole
 
@@ -59,7 +58,7 @@ class RoleResService:
         except Exception as e:
             reFlag = -1
             reMsg = '查询失败：' + str(e)
-            print(str(e))
+            settings.SYS_LOG.logger.error('getRoleAllRes:' + str(e))
         finally:
             return reFlag, reMsg, reLisRes
 
@@ -90,11 +89,11 @@ class RoleResService:
                 try:
                     self.__al.log_addition(request, rr, '更新成功')
                 except Exception as e:
-                    print(e)
+                    settings.SYS_LOG.logger.error('saveRolRes:添加角色资源日志异常：' + str(e))
 
         except Exception as e:
             reFlag = -1
             reMsg = '操作异常：' + str(e)
-
+            settings.SYS_LOG.logger.error('saveRolRes:' + str(e))
         finally:
             return reFlag, reMsg

@@ -1,12 +1,11 @@
 # !/usr/bin/env python
 # -*- coding: UTF-8 –*-
 
-# -------------------------------------------------------
 from django.template import loader
 from django.shortcuts import HttpResponse
 from rest_framework.views import View
-import json
 
+from django.conf import settings
 from fy_rabc.PermissionManage import PermissionManage
 from fy_rabc.common.sys_comm import *
 
@@ -88,7 +87,7 @@ class SysView(View):
                         msg = '没有对应的权限'
                         return HttpResponse(json.dumps({'code': flag, 'msg': msg}), content_type="application/json")
             except Exception as e:
-                print(str(e))
+                settings.SYS_LOG.logger.error('SysView.dispatch:' + str(e))
                 msg = '权限判断异常'
                 return HttpResponse(json.dumps({'code': flag, 'msg': msg}), content_type="application/json")
 

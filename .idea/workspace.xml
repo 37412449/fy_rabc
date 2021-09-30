@@ -2,11 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd69a120-4bf0-49b9-ad72-0c2ece949e60" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/fy_rabc/common/log_helper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fy_rabc_sys/static/js/sys/role_usr.js" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/static/js/sys/role_usr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc/PermissionManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc/PermissionManage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc/common/sys_comm.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc/common/sys_comm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc_sys/common/shortcuts.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/common/shortcuts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc_sys/sys_service/s_org.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/sys_service/s_org.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc_sys/sys_service/s_res.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/sys_service/s_res.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc_sys/sys_service/s_role_res.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/sys_service/s_role_res.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc_sys/sys_service/s_role_usr.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/sys_service/s_role_usr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc_sys/sys_service/s_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/sys_service/s_user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc_sys/sys_views/v_org.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/sys_views/v_org.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc_sys/sys_views/v_res.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/sys_views/v_res.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fy_rabc_sys/sys_views/v_rol_res.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/sys_views/v_rol_res.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fy_rabc_sys/sys_views/v_rol_usr.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/sys_views/v_rol_usr.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fy_rabc_sys/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc_sys/sys_views/v_usr.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/sys_views/v_usr.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +32,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Python Script" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -33,7 +45,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="7f860aeb-17b7-475f-a399-f6a494172cee" />
@@ -297,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632893355204</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="refresh2">
+      <created>1632903516937</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1632903516937</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,7 +350,8 @@
     <MESSAGE value="tt" />
     <MESSAGE value="sql" />
     <MESSAGE value="refresh" />
-    <option name="LAST_COMMIT_MESSAGE" value="refresh" />
+    <MESSAGE value="refresh2" />
+    <option name="LAST_COMMIT_MESSAGE" value="refresh2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="181" key="#Notifications" timestamp="1632807840131">
@@ -342,10 +362,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632278974428" />
-    <state x="572" y="117" key="CommitChangelistDialog2" timestamp="1632893353430">
+    <state x="572" y="117" key="CommitChangelistDialog2" timestamp="1632903515386">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="572" y="117" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1632893353430" />
+    <state x="572" y="117" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1632903515386" />
     <state width="1276" height="714" key="DebuggerActiveHint" timestamp="1632730943658">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -358,38 +378,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="823" y="415" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632805780515" />
-    <state width="1877" height="229" key="GridCell.Tab.0.bottom" timestamp="1632903367380">
+    <state width="1877" height="229" key="GridCell.Tab.0.bottom" timestamp="1632980747038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="229" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632903367380" />
-    <state width="1877" height="229" key="GridCell.Tab.0.center" timestamp="1632903367379">
+    <state width="1877" height="229" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632980747038" />
+    <state width="1877" height="229" key="GridCell.Tab.0.center" timestamp="1632980747037">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="229" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632903367379" />
-    <state width="1877" height="229" key="GridCell.Tab.0.left" timestamp="1632903367379">
+    <state width="1877" height="229" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632980747037" />
+    <state width="1877" height="229" key="GridCell.Tab.0.left" timestamp="1632980747037">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="229" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632903367379" />
-    <state width="1877" height="229" key="GridCell.Tab.0.right" timestamp="1632903367380">
+    <state width="1877" height="229" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632980747037" />
+    <state width="1877" height="229" key="GridCell.Tab.0.right" timestamp="1632980747038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="229" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632903367380" />
-    <state width="1877" height="229" key="GridCell.Tab.1.bottom" timestamp="1632896191208">
+    <state width="1877" height="229" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632980747038" />
+    <state width="1877" height="229" key="GridCell.Tab.1.bottom" timestamp="1632980176285">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="229" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632896191208" />
-    <state width="1877" height="229" key="GridCell.Tab.1.center" timestamp="1632896191208">
+    <state width="1877" height="229" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632980176285" />
+    <state width="1877" height="229" key="GridCell.Tab.1.center" timestamp="1632980176285">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="229" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632896191208" />
-    <state width="1877" height="229" key="GridCell.Tab.1.left" timestamp="1632896191208">
+    <state width="1877" height="229" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632980176285" />
+    <state width="1877" height="229" key="GridCell.Tab.1.left" timestamp="1632980176285">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="229" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632896191208" />
-    <state width="1877" height="229" key="GridCell.Tab.1.right" timestamp="1632896191208">
+    <state width="1877" height="229" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632980176285" />
+    <state width="1877" height="229" key="GridCell.Tab.1.right" timestamp="1632980176285">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="229" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632896191208" />
+    <state width="1877" height="229" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632980176285" />
     <state x="463" y="165" key="SettingsEditor" timestamp="1632894497314">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -398,10 +418,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="700" y="226" key="VCS.ChangeListViewerDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632826565687" />
-    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1632894161341">
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1632903520256">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1632894161341" />
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1632903520256" />
     <state width="960" height="523" key="XDebugger.FullValuePopup" timestamp="1632652388384">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -410,18 +430,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632824751789" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1632904438079">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632904438079" />
     <state x="652" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1632814437443">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="652" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632814437443" />
-    <state x="754" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1632807217115">
+    <state x="739" y="361" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1632904438074">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="754" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1632807217115" />
-    <state x="647" y="275" width="727" height="490" key="find.popup" timestamp="1632824233578">
+    <state x="739" y="361" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1632904438074" />
+    <state x="647" y="275" width="727" height="490" key="find.popup" timestamp="1632982882722">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="647" y="275" width="727" height="490" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1632824233578" />
+    <state x="647" y="275" width="727" height="490" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1632982882722" />
     <state x="749" y="322" key="git4idea.merge.GitMergeDialog" timestamp="1632877823999">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -447,11 +471,6 @@
           <url>file://$PROJECT_DIR$/fy_rabc_sys/sys_admin/admin_user_role.py</url>
           <line>4</line>
           <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/fy_rabc_sys/sys_views/v_res.py</url>
-          <line>3</line>
-          <option name="timeStamp" value="181" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

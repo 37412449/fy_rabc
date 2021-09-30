@@ -1,6 +1,7 @@
 # !/usr/bin/env python
 # -*- coding: UTF-8 –*-
 
+from django.conf import settings
 from fy_rabc_sys.sys_models.model_user_role import UserRoleModel
 from fy_rabc_sys.sys_models.model_resource import ResourceModel
 from fy_rabc_sys.sys_models.model_role_res import RoleResModel
@@ -92,5 +93,5 @@ class PermissionManage:
             else:
                 return True
         except Exception as e:
-            print(e)
+            settings.SYS_LOG.logger.error('permissionCheck:' + str(e))
             return False

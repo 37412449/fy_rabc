@@ -1,8 +1,6 @@
 # !/usr/bin/env python
 # -*- coding: UTF-8 –*-
 
-import json
-
 from fy_rabc_sys.sys_models.model_company import CompanyModel
 from fy_rabc_sys.sys_models.model_org import OrgModel
 from fy_rabc_sys.sys_models.model_user import UserModel
@@ -145,7 +143,7 @@ class UsrService:
                     try:
                         self.__al.log_addition(request, usr, reMsg)
                     except Exception as e:
-                        print(e)
+                        settings.SYS_LOG.logger.error('saveUsr:添加用户日志异常：' + str(e))
 
                 elif optype == 'update':
                     UserModel.objects.filter(user_code=id).update(org_code_id=org_code, user_name=user_name,
@@ -176,18 +174,18 @@ class UsrService:
                     try:
                         self.__al.log_change(request, ur, reMsg)
                     except Exception as e:
-                        print(e)
+                        settings.SYS_LOG.logger.error('saveUsr:修改用户日志异常：' + str(e))
             else:
                 reFlag = 0
                 reMsg = '未操作任何数据'
         except Exception as e:
             reFlag = -1
             reMsg = '操作异常：' + str(e)
-
+            settings.SYS_LOG.logger.error('saveUsr:' + str(e))
         finally:
             return reFlag, reMsg, currId
 
-    def usrChgOrgView(self, request, operator):
+    def usrChgOrgView(self, request):
         reFlag = 0
         reMsg = ''
         currId = 0
@@ -209,14 +207,14 @@ class UsrService:
                     try:
                         self.__al.log_change(request, um[0], reMsg)
                     except Exception as e:
-                        print(e)
+                        settings.SYS_LOG.logger.error('usrChgOrgView:修改用户组织架构日志异常：' + str(e))
             else:
                 reFlag = 0
                 reMsg = '未操作任何数据'
         except Exception as e:
             reFlag = -1
             reMsg = '操作异常：' + str(e)
-
+            settings.SYS_LOG.logger.error('usrChgOrgView:' + str(e))
         finally:
             return reFlag, reMsg, currId
 
@@ -240,7 +238,7 @@ class UsrService:
         except Exception as e:
             reFlag = -1
             reMsg = '查询失败：' + str(e)
-            print(str(e))
+            settings.SYS_LOG.logger.error('getAllRolesViews:' + str(e))
         finally:
             return reFlag, reMsg, reLisRole
 
@@ -265,7 +263,7 @@ class UsrService:
         except Exception as e:
             reFlag = -1
             reMsg = '查询失败：' + str(e)
-            print(str(e))
+            settings.SYS_LOG.logger.error('getUserAllRoles:' + str(e))
 
         finally:
             return reFlag, reMsg, reLisRole
@@ -288,7 +286,7 @@ class UsrService:
         except Exception as e:
             reFlag = -1
             reMsg = '查询失败：' + str(e)
-            print(str(e))
+            settings.SYS_LOG.logger.error('checkLoginNameExist:' + str(e))
 
         finally:
             return reFlag, reMsg, existFlag
@@ -331,6 +329,7 @@ class UsrService:
         except Exception as e:
             reFlag = -1
             reMsg = '操作异常：' + str(e)
+            settings.SYS_LOG.logger.error('checkUsr:' + str(e))
 
         finally:
             return reFlag, reMsg
@@ -356,7 +355,7 @@ class UsrService:
                 try:
                     self.__al.log_deletion(request, um[0], '删除用户记录,user_code:' + str(usrId))
                 except Exception as e:
-                    print(e)
+                    settings.SYS_LOG.logger.error('delUsr:记录删除用户日志异常：' + str(e))
 
                 delFlag = um.delete()
                 if delFlag[0] > 0:
@@ -371,6 +370,6 @@ class UsrService:
         except Exception as e:
             reFlag = -1
             reMsg = '操作异常：' + str(e)
-
+            settings.SYS_LOG.logger.error('delUsr:' + str(e))
         finally:
             return reFlag, reMsg

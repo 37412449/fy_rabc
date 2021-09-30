@@ -1,6 +1,7 @@
 # !/usr/bin/env python
 # -*- coding: UTF-8 –*-
 
+from django.conf import settings
 from fy_rabc_sys.sys_service.s_res import ResServic
 from fy_rabc_sys.common.shortcuts import *
 
@@ -9,8 +10,11 @@ class ResGetView(SysView):
     __rs = ResServic()
 
     def get(self, request):
-        resTree = self.__rs.getResTree()
-        return render(request, 'res_main.html', {"restree": resTree, "actions": PAGE_ACTION})
+        try:
+            resTree = self.__rs.getResTree()
+            return render(request, 'res_main.html', {"restree": resTree, "actions": PAGE_ACTION})
+        except Exception as e:
+            settings.SYS_LOG.logger.error('ResGetView:' + str(e))
 
 
 class ResSaveView(SysView):
@@ -26,9 +30,9 @@ class ResSaveView(SysView):
             if flag == 1:
                 restree = self.__rs.getResTree()
         except Exception as e:
-            print(str(e))
+            settings.SYS_LOG.logger.error('ResSaveView:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'restree': restree, 'curid': curid}),
-                            content_type="application/json");
+                            content_type="application/json")
 
 
 class ResCheckView(SysView):
@@ -40,8 +44,8 @@ class ResCheckView(SysView):
         try:
             flag, msg = self.__rs.checkRes(request)
         except Exception as e:
-            print(str(e))
-        return HttpResponse(json.dumps({'code': flag, 'msg': msg}), content_type="application/json");
+            settings.SYS_LOG.logger.error('ResCheckView:' + str(e))
+        return HttpResponse(json.dumps({'code': flag, 'msg': msg}), content_type="application/json")
 
 
 class ResDelView(SysView):
@@ -56,6 +60,6 @@ class ResDelView(SysView):
             if flag == 1:
                 restree = self.__rs.getResTree()
         except Exception as e:
-            print(str(e))
+            settings.SYS_LOG.logger.error('ResDelView:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'restree': restree}),
-                            content_type="application/json");
+                            content_type="application/json")

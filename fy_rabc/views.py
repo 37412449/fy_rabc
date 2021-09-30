@@ -4,6 +4,7 @@
 from django.contrib.auth import authenticate
 from django.contrib.admin.sites import AdminSite
 
+from django.conf import settings
 from fy_rabc.PermissionManage import PermissionManage
 from fy_rabc_sys.sys_models.model_user import UserModel
 
@@ -33,6 +34,6 @@ def mylogin(request):
                 # permission = Permission.objects.create(codename='view_role', name='Can view role', content_type=content_type)
                 # user.user_permissions.add(permission)
         except Exception as e:
-            print(str(e))
+            settings.SYS_LOG.logger.error('mylogin:' + str(e))
     site = AdminSite(name='admin')
     return site.login(request)

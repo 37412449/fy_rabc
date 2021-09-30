@@ -236,3 +236,7 @@ REST_FRAMEWORD = {
         'rest_framework.authentication.TokenAuthentication',  # token认证
     )
 }
+
+# 声明日志对象
+from fy_rabc.common.log_helper import log_helper
+SYS_LOG = log_helper()

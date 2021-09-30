@@ -1,8 +1,7 @@
 # !/usr/bin/env python
 # -*- coding: UTF-8 –*-
 
-import json
-
+from django.conf import settings
 from fy_rabc_sys.sys_models.model_user_role import UserRoleModel
 from fy_rabc_sys.sys_models.model_role import RoleModel
 from fy_rabc_sys.sys_models.model_user import UserModel
@@ -35,7 +34,7 @@ class RoleUserService:
         except Exception as e:
             reFlag = -1
             reMsg = '查询失败：' + str(e)
-            print(str(e))
+            settings.SYS_LOG.logger.error('getAllRols:' + str(e))
         finally:
             return reFlag, reMsg, reLisRole
 
@@ -60,7 +59,7 @@ class RoleUserService:
         except Exception as e:
             reFlag = -1
             reMsg = '查询失败：' + str(e)
-            print(str(e))
+            settings.SYS_LOG.logger.error('getRoleUsers:' + str(e))
         finally:
             return reFlag, reMsg, reLisUsrs
 
@@ -91,11 +90,11 @@ class RoleUserService:
                 try:
                     self.__al.log_addition(request, ur, '更新成功')
                 except Exception as e:
-                    print(e)
+                    settings.SYS_LOG.logger.error('saveUsrRol:设置用户角色日志异常：' + str(e))
 
         except Exception as e:
             reFlag = -1
             reMsg = '操作异常：' + str(e)
-
+            settings.SYS_LOG.logger.error('saveUsrRol:' + str(e))
         finally:
             return reFlag, reMsg

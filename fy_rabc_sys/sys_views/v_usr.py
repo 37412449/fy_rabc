@@ -1,6 +1,7 @@
 # !/usr/bin/env python
 # -*- coding: UTF-8 –*-
 
+from django.conf import settings
 from fy_rabc_sys.sys_service.s_user import UsrService
 from fy_rabc.common.AuthorityJudgment import *
 
@@ -11,8 +12,11 @@ class UsrGetView(SysView):
     __us = UsrService()
 
     def get(self, request):
-        usrTree = self.__us.getUsrTree()
-        return render(request, 'user_main.html', {"usrtree": usrTree})
+        try:
+            usrTree = self.__us.getUsrTree()
+            return render(request, 'user_main.html', {"usrtree": usrTree})
+        except Exception as e:
+            settings.SYS_LOG.logger.error('UsrGetView:' + str(e))
 
 
 class UsrSaveView(SysView):
@@ -28,7 +32,7 @@ class UsrSaveView(SysView):
             if flag == 1:
                 usrtree = self.__us.getUsrTree()
         except Exception as e:
-            print(str(e))
+            settings.SYS_LOG.logger.error('UsrSaveView:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'usrtree': usrtree, 'curid': curid}),
                             content_type="application/json");
 
@@ -42,11 +46,11 @@ class UsrChgOrgView(SysView):
         usrtree = {}
         curid = 0
         try:
-            flag, msg, curid = self.__us.usrChgOrgView(request, request.user.username)
+            flag, msg, curid = self.__us.usrChgOrgView(request)
             if flag == 1:
                 usrtree = self.__us.getUsrTree()
         except Exception as e:
-            print(str(e))
+            settings.SYS_LOG.logger.error('UsrChgOrgView:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'usrtree': usrtree, 'curid': curid}),
                             content_type="application/json");
 
@@ -63,7 +67,7 @@ class checkLoginNameExist(SysView):
             jsData = json.loads(reData)
             flag, msg, existflag = self.__us.checkLoginNameExist(jsData['loginname'])
         except Exception as e:
-            print(str(e))
+            settings.SYS_LOG.logger.error('checkLoginNameExist:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'existflag': existflag}),
                             content_type="application/json");
 
@@ -78,7 +82,7 @@ class QueryAllRoles(SysView):
         try:
             flag, msg, lisRoles = self.__us.getAllRolesViews()
         except Exception as e:
-            print(str(e))
+            settings.SYS_LOG.logger.error('QueryAllRoles:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'roles': lisRoles}), content_type="application/json");
 
 
@@ -94,8 +98,9 @@ class getUserAllRoles(SysView):
             jsData = json.loads(reData)
             flag, msg, lisRoles = self.__us.getUserAllRoles(jsData['usercode'])
         except Exception as e:
-            print(str(e))
+            settings.SYS_LOG.logger.error('getUserAllRoles:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'roles': lisRoles}), content_type="application/json");
+
 
 class UsrCheckView(SysView):
     __us = UsrService()
@@ -106,7 +111,7 @@ class UsrCheckView(SysView):
         try:
             flag, msg = self.__us.checkUsr(request)
         except Exception as e:
-            print(str(e))
+            settings.SYS_LOG.logger.error('UsrCheckView:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg}), content_type="application/json");
 
 
@@ -122,6 +127,6 @@ class UsrDelView(SysView):
             if flag == 1:
                 usrtree = self.__us.getUsrTree()
         except Exception as e:
-            print(str(e))
+            settings.SYS_LOG.logger.error('UsrDelView:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'usrtree': usrtree}),
                             content_type="application/json");
