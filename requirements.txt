@@ -1,9 +1,12 @@
 asgiref==3.4.1
+colorama==0.4.4
 Django==3.2.6
 django-cors-headers==3.8.0
 djangorestframework==3.12.4
+loguru==0.5.3
 PyMySQL==1.0.2
 pytz==2021.1
 sqlparse==0.4.1
 typing-extensions==3.10.0.0
+win32-setctime==1.0.3
 xpinyin==0.7.6
