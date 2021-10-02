@@ -1,1 +1,2 @@
-https://raw.githubusercontent.com/37412449/fy_rabc/master/%E5%9F%BA%E4%BA%8EDjango%E5%BC%80%E5%8F%91%E7%9A%84%E9%80%9A%E7%94%A8%E7%B3%BB%E7%BB%9F%E6%9D%83%E9%99%90%E6%A8%A1%E5%9D%97%EF%BC%88RABC%EF%BC%89.docx
+截图：
+![Alt text](https://github.com/37412449/fy_rabc/blob/master/read_me/0001.jpg)
