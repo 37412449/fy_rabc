@@ -91,6 +91,12 @@ class SysView(View):
                 msg = '权限判断异常'
                 return HttpResponse(json.dumps({'code': flag, 'msg': msg}), content_type="application/json")
 
+            try:
+                # 日志
+                settings.SYS_LOG.infoMsg(request)
+            except Exception as lg:
+                print(str(lg))
+
         if request.method.lower() in self.http_method_names:
             handler = getattr(self, request.method.lower(), self.http_method_not_allowed)
         else:

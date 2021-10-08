@@ -36,8 +36,6 @@ class OrgCheckView(SysView):
         try:
             flag, msg = self.__os.checkOrg(request)
 
-            # 日志
-            settings.SYS_LOG.infoMsg(request)
         except Exception as e:
             settings.SYS_LOG.logger.error('OrgCheckView:' + str(e))
 
@@ -57,8 +55,6 @@ class OrgSaveView(SysView):
             if flag == 1:
                 orgtree = self.__os.getOrgTree()
 
-            # 日志
-            settings.SYS_LOG.infoMsg(request)
         except Exception as e:
             settings.SYS_LOG.logger.error('OrgSaveView:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'orgtree': orgtree, 'curid': curid}),
@@ -77,8 +73,6 @@ class OrgDelView(SysView):
             if flag == 1:
                 orgtree = self.__os.getOrgTree()
 
-            # 日志
-            settings.SYS_LOG.infoMsg(request)
         except Exception as e:
             settings.SYS_LOG.logger.error('OrgDelView:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'orgtree': orgtree}),

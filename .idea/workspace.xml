@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bd69a120-4bf0-49b9-ad72-0c2ece949e60" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fy_rabc/common/log_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc/common/log_helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fy_rabc_sys/common/shortcuts.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/common/shortcuts.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fy_rabc_sys/sys_views/v_org.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/sys_views/v_org.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fy_rabc_sys/sys_views/v_res.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/sys_views/v_res.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fy_rabc_sys/sys_views/v_rol_res.py" beforeDir="false" afterPath="$PROJECT_DIR$/fy_rabc_sys/sys_views/v_rol_res.py" afterDir="false" />
@@ -179,10 +179,10 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Django server.fy_rabc" />
       <item itemvalue="Python.PermissionManage" />
       <item itemvalue="Python.s_res" />
       <item itemvalue="Python.sys_comm" />
+      <item itemvalue="Django server.fy_rabc" />
     </list>
     <recent_temporary>
       <list>
@@ -344,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632992988673</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="日志记录">
+      <created>1633661401749</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1633661401749</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +389,8 @@
     <MESSAGE value="log" />
     <MESSAGE value="修改Title" />
     <MESSAGE value="修改Title——1" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改Title——1" />
+    <MESSAGE value="日志记录" />
+    <option name="LAST_COMMIT_MESSAGE" value="日志记录" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="181" key="#Notifications" timestamp="1632988695442">
@@ -393,10 +401,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632278974428" />
-    <state x="572" y="117" key="CommitChangelistDialog2" timestamp="1632992987292">
+    <state x="572" y="117" key="CommitChangelistDialog2" timestamp="1633661400277">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="572" y="117" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1632992987292" />
+    <state x="572" y="117" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1633661400277" />
     <state width="1276" height="714" key="DebuggerActiveHint" timestamp="1633658261523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -465,10 +473,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632992444038" />
-    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1632993205047">
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1633661587041">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1632993205047" />
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1633661587041" />
     <state width="960" height="523" key="XDebugger.FullValuePopup" timestamp="1632652388384">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

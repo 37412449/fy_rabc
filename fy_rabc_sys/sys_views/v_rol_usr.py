@@ -49,8 +49,6 @@ class GetRoles(SysView):
         try:
             flag, msg, lisRoles = self.__rus.getAllRols()
 
-            # 日志
-            settings.SYS_LOG.infoMsg(request)
         except Exception as e:
             settings.SYS_LOG.logger.error('GetRoles:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'roles': lisRoles}), content_type="application/json")
@@ -68,8 +66,6 @@ class getRoleUsers(SysView):
             jsData = json.loads(reData)
             flag, msg, lisUsers = self.__rus.getRoleUsers(jsData['rolecode'])
 
-            # 日志
-            settings.SYS_LOG.infoMsg(request)
         except Exception as e:
             settings.SYS_LOG.logger.error('getRoleUsers:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'usrs': lisUsers}), content_type="application/json")
@@ -84,8 +80,6 @@ class saveUsrRol(SysView):
         try:
             flag, msg = self.__rus.saveUsrRol(request, request.user.username)
 
-            # 日志
-            settings.SYS_LOG.infoMsg(request)
         except Exception as e:
             settings.SYS_LOG.logger.error('saveUsrRol:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg}), content_type="application/json")

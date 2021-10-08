@@ -30,8 +30,6 @@ class ResSaveView(SysView):
             if flag == 1:
                 restree = self.__rs.getResTree()
 
-            # 日志
-            settings.SYS_LOG.infoMsg(request)
         except Exception as e:
             settings.SYS_LOG.logger.error('ResSaveView:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'restree': restree, 'curid': curid}),
@@ -47,8 +45,6 @@ class ResCheckView(SysView):
         try:
             flag, msg = self.__rs.checkRes(request)
 
-            # 日志
-            settings.SYS_LOG.infoMsg(request)
         except Exception as e:
             settings.SYS_LOG.logger.error('ResCheckView:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg}), content_type="application/json")
@@ -67,9 +63,6 @@ class ResDelView(SysView):
                 restree = self.__rs.getResTree()
         except Exception as e:
             settings.SYS_LOG.logger.error('ResDelView:' + str(e))
-
-        # 日志
-        settings.SYS_LOG.infoMsg(request)
 
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'restree': restree}),
                             content_type="application/json")
