@@ -27,10 +27,14 @@ class GetUsrTree(SysView):
             usrtree = us.getUsrTree()
             flag = 1
             msg = '获取用户树成功'
+
+            # 日志
+            settings.SYS_LOG.infoMsg(request)
         except Exception as e:
             flag = -1
             msg = '获取用户树异常:' + str(e)
             settings.SYS_LOG.logger.error('GetUsrTree:' + str(e))
+
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'usrtree': usrtree}),
                             content_type="application/json")
 
@@ -44,6 +48,9 @@ class GetRoles(SysView):
         lisRoles = []
         try:
             flag, msg, lisRoles = self.__rus.getAllRols()
+
+            # 日志
+            settings.SYS_LOG.infoMsg(request)
         except Exception as e:
             settings.SYS_LOG.logger.error('GetRoles:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'roles': lisRoles}), content_type="application/json")
@@ -60,6 +67,9 @@ class getRoleUsers(SysView):
             reData = str(request.body, encoding="utf-8")
             jsData = json.loads(reData)
             flag, msg, lisUsers = self.__rus.getRoleUsers(jsData['rolecode'])
+
+            # 日志
+            settings.SYS_LOG.infoMsg(request)
         except Exception as e:
             settings.SYS_LOG.logger.error('getRoleUsers:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'usrs': lisUsers}), content_type="application/json")
@@ -73,6 +83,9 @@ class saveUsrRol(SysView):
         msg = ''
         try:
             flag, msg = self.__rus.saveUsrRol(request, request.user.username)
+
+            # 日志
+            settings.SYS_LOG.infoMsg(request)
         except Exception as e:
             settings.SYS_LOG.logger.error('saveUsrRol:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg}), content_type="application/json")

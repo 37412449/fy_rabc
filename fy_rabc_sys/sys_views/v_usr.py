@@ -31,6 +31,9 @@ class UsrSaveView(SysView):
             flag, msg, curid = self.__us.saveUsr(request, request.user.username)
             if flag == 1:
                 usrtree = self.__us.getUsrTree()
+
+            # 日志
+            settings.SYS_LOG.infoMsg(request)
         except Exception as e:
             settings.SYS_LOG.logger.error('UsrSaveView:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'usrtree': usrtree, 'curid': curid}),
@@ -49,6 +52,9 @@ class UsrChgOrgView(SysView):
             flag, msg, curid = self.__us.usrChgOrgView(request)
             if flag == 1:
                 usrtree = self.__us.getUsrTree()
+
+            # 日志
+            settings.SYS_LOG.infoMsg(request)
         except Exception as e:
             settings.SYS_LOG.logger.error('UsrChgOrgView:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'usrtree': usrtree, 'curid': curid}),
@@ -66,6 +72,9 @@ class checkLoginNameExist(SysView):
             reData = str(request.body, encoding="utf-8")
             jsData = json.loads(reData)
             flag, msg, existflag = self.__us.checkLoginNameExist(jsData['loginname'])
+
+            # 日志
+            settings.SYS_LOG.infoMsg(request)
         except Exception as e:
             settings.SYS_LOG.logger.error('checkLoginNameExist:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'existflag': existflag}),
@@ -81,6 +90,9 @@ class QueryAllRoles(SysView):
         lisRoles = []
         try:
             flag, msg, lisRoles = self.__us.getAllRolesViews()
+
+            # 日志
+            settings.SYS_LOG.infoMsg(request)
         except Exception as e:
             settings.SYS_LOG.logger.error('QueryAllRoles:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'roles': lisRoles}), content_type="application/json");
@@ -97,6 +109,9 @@ class getUserAllRoles(SysView):
             reData = str(request.body, encoding="utf-8")
             jsData = json.loads(reData)
             flag, msg, lisRoles = self.__us.getUserAllRoles(jsData['usercode'])
+
+            # 日志
+            settings.SYS_LOG.infoMsg(request)
         except Exception as e:
             settings.SYS_LOG.logger.error('getUserAllRoles:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'roles': lisRoles}), content_type="application/json");
@@ -110,6 +125,9 @@ class UsrCheckView(SysView):
         msg = ''
         try:
             flag, msg = self.__us.checkUsr(request)
+
+            # 日志
+            settings.SYS_LOG.infoMsg(request)
         except Exception as e:
             settings.SYS_LOG.logger.error('UsrCheckView:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg}), content_type="application/json");
@@ -126,6 +144,9 @@ class UsrDelView(SysView):
             flag, msg = self.__us.delUsr(request)
             if flag == 1:
                 usrtree = self.__us.getUsrTree()
+
+            # 日志
+            settings.SYS_LOG.infoMsg(request)
         except Exception as e:
             settings.SYS_LOG.logger.error('UsrDelView:' + str(e))
         return HttpResponse(json.dumps({'code': flag, 'msg': msg, 'usrtree': usrtree}),

@@ -5,6 +5,7 @@ from loguru import logger
 import os
 import threading
 import sys
+import json
 
 Base_Root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(Base_Root)
@@ -57,3 +58,32 @@ class log_helper(object):
             rotation="00:00", retention=7, level='DEBUG', encoding='utf-8'
         )
         '''
+
+    @classmethod
+    def infoMsg(cls, request):
+        if request.method == 'POST':
+            try:
+                # 参数
+                infoPar = '['
+                if request.body:
+                    reData = str(request.body, encoding="utf-8")
+                    jsData = json.loads(reData)
+                    if jsData:
+                        for key in jsData.keys():
+                            infoPar = infoPar + key + ":" + str(jsData[key]) + ","
+                infoPar = infoPar.rstrip(',') + "]"
+
+                # 路径
+                infoPath = ''
+                if request.path:
+                    infoPath = request.path
+
+                # 用户
+                infoUser = ''
+                if request.user:
+                    infoUser = request.user.username
+
+                # 写日志
+                cls.myLogger.info("用户:" + infoUser + ";操作:" + infoPath + ";参数:" + infoPar)
+            except Exception as e:
+                print(str(e))
