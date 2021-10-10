@@ -13,7 +13,7 @@ from fy_rabc.common.CustAdminModel import CustAdminModel
 class CompanyAdmin(CustAdminModel):
     list_display = ['pk', 'short_name', 'full_name', 'address', 'tel', 'status']
     search_fields = ['full_name', 'address', 'core_value']
-    fields = ['company_code', 'short_name', 'full_name', 'address', 'tel', 'logo_url', 'core_value',
+    fields = ['short_name', 'full_name', 'address', 'tel', 'logo_url', 'core_value',
               'status', 'creator', 'createdate', 'updator', 'updatedate', 'remark']  # 详细页面的字段
     list_display_links = ('pk', 'short_name')  # 点击可跳转
     list_editable = ["full_name"]  # 列表界面可编辑
