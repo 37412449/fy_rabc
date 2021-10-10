@@ -14,7 +14,7 @@ from fy_rabc.common.CustAdminModel import CustAdminModel
 class RoleAdmin(CustAdminModel):
     list_display = ['pk', 'role_name', 'status']
     search_fields = ['pk', 'role_name']
-    fields = ['role_code', 'role_name', 'status', 'creator', 'createdate', 'updator', 'updatedate', 'remark']  # 详细页面的字段
+    fields = ['role_name', 'status', 'creator', 'createdate', 'updator', 'updatedate', 'remark']  # 详细页面的字段
     list_display_links = ('pk', 'role_name')  # 点击可跳转
     # list_editable = ["role_name"]  # 列表界面可编辑
     readonly_fields = ('role_code', 'creator', 'createdate', 'updator', 'updatedate')  # 只读字段
