@@ -22,9 +22,9 @@ var fun_selRole = function (rolcode) {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            alert('获取用户异常！');
             _action.disSave = true;
             _action.disCancle = true;
+            window.location.replace('/admin/login/');
         }
     });
     _selRoleValue = rolcode;
@@ -47,9 +47,9 @@ var fun_getAllRoles = function (roles) {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            alert('获取角色异常！');
             _action.disSave = true;
             _action.disCancle = true;
+            window.location.replace('/admin/login/');
         }
     });
     roles.length = 0;
@@ -76,9 +76,9 @@ var fun_getUsrTree = function () {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            alert('获取用户树异常！');
             _action.disSave = true;
             _action.disCancle = true;
+            window.location.replace('/admin/login/');
         }
     });
 };

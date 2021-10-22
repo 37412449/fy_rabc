@@ -348,7 +348,7 @@ var checkNodeDel = function (nodeId) {
             reFlag = data['code'];
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            alert('检查子资源异常！');
+            window.location.replace('/admin/login/');
         }
     });
     return reFlag;

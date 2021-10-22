@@ -312,7 +312,7 @@ var checkNodeDel = function (nodeId) {
             reFlag = data['code'];
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            alert('检查子机构异常！');
+           window.location.replace('/admin/login/');
         }
     });
     return reFlag;

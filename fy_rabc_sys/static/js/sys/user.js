@@ -139,11 +139,11 @@ var fun_getAllRoles = function () {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            alert('获取所有角色异常！');
             _action.disSave = true;
             _action.disAdd = true;
             _action.disUpdate = true;
             _action.disCancle = true;
+            window.location.replace('/admin/login/');
         }
     });
 };
@@ -170,11 +170,11 @@ var fun_getUsrAllRols = function (usrcode) {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            alert('获取用户角色异常！');
             _action.disSave = true;
             _action.disAdd = true;
             _action.disUpdate = true;
             _action.disCancle = true;
+            window.location.replace('/admin/login/');
         }
     });
     return ownRols;
@@ -557,7 +557,7 @@ var checkNodeDel = function (nodeId) {
             reFlag = data['code'];
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            alert('检查用户是否可以删除异常！');
+            window.location.replace('/admin/login/');
         }
     });
     return reFlag;
