@@ -411,7 +411,8 @@
             }
 
             //TODO 需要做国际化
-            if (checkbox_checked == 0 && data_name != "add_item" && !_action.customButton[data_name].action_url) {
+            if (checkbox_checked == 0 && data_name != undefined && data_name != "add_item" &&
+                _action.customButton[data_name] != undefined && !_action.customButton[data_name].action_url) {
                 _vue.$alert(getLanuage("Please select at least one option!"), '', {
                     type: 'warning'
                 })
