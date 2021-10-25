@@ -210,7 +210,7 @@ var _action = new Vue({
         },
         handleSelect(item) {
             //console.log(item);
-            this.form.resvalue = item['action']
+            this.form.resvalue = item['action'];
         }
     },
     mounted() {
