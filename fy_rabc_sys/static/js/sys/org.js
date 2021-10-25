@@ -42,8 +42,8 @@ var _action = new Vue({
             'orgname': '',
             'id': -1,
             'orgtypes':
-                [{id: 'D', name: '部门'}, {id: 'G', name: '组'}, {id: 'P', name: '岗位'},
-                    {id: 'C', name: '公司', 'disabled': true}],
+                [{id: 'S', name: '分公司'}, {id: 'D', name: '部门'}, {id: 'G', name: '组'}, {id: 'P', name: '岗位'},
+                    {id: 'C', name: '(总)公司', 'disabled': true}],
             orgselected: '',
             'orgstatus': [{id: 1, name: '有效'}, {id: 0, name: '无效'}],
             staselected: 1,
@@ -195,11 +195,7 @@ var setOrgValue = function (nodeData) {
         _action.disAdd = false;
         _action.form.disOrgType = false;
 
-    } else if (nodeData.orgtype == 'D') {
-        _action.disUpdate = false;
-        _action.disAdd = false;
-        _action.form.disOrgType = false;
-    } else if (nodeData.orgtype == 'G') {
+    } else if (nodeData.orgtype == 'S' || nodeData.orgtype == 'D' || nodeData.orgtype == 'G') {
         _action.disUpdate = false;
         _action.disAdd = false;
         _action.form.disOrgType = false;
@@ -244,7 +240,7 @@ var cancleSetValue = function () {
         _action.disUpdate = true;
         _action.disAdd = false;
     }
-    if (_hiVue.orgnodevalue.orgtype == 'D' || _hiVue.orgnodevalue.orgtype == 'G') {
+    if (_hiVue.orgnodevalue.orgtype == 'S' || _hiVue.orgnodevalue.orgtype == 'D' || _hiVue.orgnodevalue.orgtype == 'G') {
         _action.disUpdate = false;
         _action.disAdd = false;
     }
@@ -279,6 +275,8 @@ var addControl = function () {
     if (_hiVue.orgnodevalue.orgtype == 'P') {
         _action.form.orgselected = '';
     } else if (_hiVue.orgnodevalue.orgtype == 'C') {
+        _action.form.orgselected = 'S';
+    } else if (_hiVue.orgnodevalue.orgtype == 'S') {
         _action.form.orgselected = 'D';
     } else if (_hiVue.orgnodevalue.orgtype == 'D') {
         _action.form.orgselected = 'G';
@@ -312,7 +310,7 @@ var checkNodeDel = function (nodeId) {
             reFlag = data['code'];
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-           window.location.replace('/admin/login/');
+            window.location.replace('/admin/login/');
         }
     });
     return reFlag;

@@ -34,7 +34,7 @@ class OrgService:
             def createTreeNode(parentId, parentOrg, lisAllOrg):
                 leftOrg = [m for m in lisAllOrg if m.parent_id == parentId]
                 for m in leftOrg:
-                    if m.org_type in ('D', 'G'):
+                    if m.org_type in ('S', 'D', 'G'):
                         tmpOrg = {"id": m.id, "orgname": m.org_name, "chilorg": [], "orgtype": m.org_type,
                                   "status": m.status,
                                   "remark": m.remark if m.remark is not None else ''}
@@ -75,14 +75,16 @@ class OrgService:
                     reMsg = '名称不能为空！'
                     return reFlag, reMsg, currId
 
-                if orgtype is None or str(orgtype).strip() not in ['D', 'G', 'P']:
+                if orgtype is None or str(orgtype).strip() not in ['S', 'D', 'G', 'P']:
                     reFlag = -1
                     reMsg = '类型选择不正确！'
                     return reFlag, reMsg, currId
 
                 if optype == 'add':
                     uuid = getUUID()
-                    if orgtype == 'D':
+                    if orgtype == 'S':
+                        orgcode = 'OGS-' + uuid[4:]
+                    elif orgtype == 'D':
                         orgcode = 'OGD-' + uuid[4:]
                     elif orgtype == 'G':
                         orgcode = 'OGG-' + uuid[4:]
