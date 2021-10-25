@@ -358,6 +358,14 @@
             src="{% static 'admin/simpleui-x/waves/waves.min.js' %}?_={% get_version %}"></script>
     {% block index_js %}
         <script type="text/javascript" src="{% static 'admin/simpleui-x/js/menu.js' %}?_={% get_version %}"></script>
+        <script type="text/javascript" language="JavaScript">
+            var _maxOpenPages = 0;
+            try {
+                _maxOpenPages = {{ "MAX_OPEN_PAGES" |get_config }};
+            } catch (e) {
+                console.log(e);
+            }
+        </script>
         <script type="text/javascript" src="{% static 'admin/simpleui-x/js/index.js' %}?_={% get_version %}"></script>
     {% endblock %}
     {% block autoupdate %}

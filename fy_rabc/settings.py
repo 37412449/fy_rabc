@@ -180,6 +180,9 @@ SIMPLEUI_ICON = {
     # '槽位填充信息表': 'fas fa-user-tie',
 }
 
+# 最大打开页签数
+MAX_OPEN_PAGES = 10
+
 # --------------------------simpleui 配置结束-------------------------------------
 
 # 白名单
@@ -239,4 +242,5 @@ REST_FRAMEWORD = {
 
 # 声明日志对象
 from fy_rabc.common.log_helper import log_helper
+
 SYS_LOG = log_helper()

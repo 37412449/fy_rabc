@@ -493,6 +493,16 @@
                 if (exists) {
                     this.tabModel = exists.id;
                 } else {
+                    // 限制最多打开页面标签数
+                    if (this.tabs != null && this.tabs != undefined && _maxOpenPages > 0 && this.tabs.length > _maxOpenPages) {
+                        this.$message({
+                            showClose: true,
+                            message: '打开页签数过多，请关闭部分！',
+                            type: 'warning'
+                        });
+                        return;
+                    }
+
                     //其他的网址loading会一直转
                     if (data.url && data.url.indexOf('http') != 0) {
                         if (loading) {
