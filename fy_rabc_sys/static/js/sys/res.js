@@ -95,6 +95,7 @@ var _action = new Vue({
                 _hiVue.infos = '父节点的值不能为空（菜单路径），请先修改！';
                 _hiVue.dialogVisible = true;
                 this.disSave = true;
+                return;
             }
         },
         getStatSelected() {
