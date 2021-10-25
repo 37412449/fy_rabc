@@ -57,3 +57,7 @@
     width: 450px;
     border: gainsboro 1px solid;
 }
+
+.el-alert__title {
+    color: #d10ebf;
+}

@@ -65,12 +65,18 @@
 .el-transfer-panel .el-transfer-panel__header .el-checkbox .el-checkbox__label {
     font-size: 10px !important;
 }
-.el-transfer-panel{
+
+.el-transfer-panel {
     height: 450px;
     width: 280px;
     border: #c5cbd1 1px solid;
 }
+
 .el-transfer-panel__list.is-filterable {
     height: 370px;
     overflow: auto;
+}
+
+.el-alert__title {
+    color: #d10ebf;
 }
