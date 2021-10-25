@@ -74,7 +74,7 @@
                     <el-form-item label="{{ 'ObjName'|customtrans }}" class="el_itemhegiht" prop="resname">
                         <el-row size="small" class="el_inputwidth">
                             <el-col :span="12">
-                                <el-autocomplete ref="txtResName" v-model="form.resname"
+                                <el-autocomplete ref="txtResName" v-model="form.resname" :debounce=0
                                                  :fetch-suggestions="querySearch" size="small"
                                                  class="el_inputwidth" placeholder="请输名称" @select="handleSelect"
                                                  maxlength="20">
