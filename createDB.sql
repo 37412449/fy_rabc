@@ -449,6 +449,8 @@ CREATE TABLE `t_sys_config`  (
 -- ----------------------------
 -- Records of t_sys_config
 -- ----------------------------
+INSERT INTO `t_sys_config` VALUES (1, '性别', '男', 'str', '1', 1, 'admin', '2021-10-26 15:31:57', NULL, '2021-10-26 15:31:57', NULL);
+INSERT INTO `t_sys_config` VALUES (2, '性别', '女', 'str', '0', 1, 'admin', '2021-10-26 15:32:11', NULL, '2021-10-26 15:32:11', NULL);
 
 -- ----------------------------
 -- Table structure for t_sys_org
