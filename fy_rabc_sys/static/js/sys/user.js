@@ -1,4 +1,5 @@
 _operationType = null;
+var _hisTreeData = JSON.parse(JSON.stringify(_usrTreeData));
 var _hiVue = new Vue({
     el: '#divHidden',
     data: {
@@ -14,7 +15,6 @@ var _usrTree = new Vue({
             children: 'chilusr'
         },
         treedata: _usrTreeData,
-        hisTreeData: _usrTreeData,
         expKeys: [],
     },
     created() {
@@ -76,7 +76,7 @@ var _usrTree = new Vue({
 
                     if (res.data['code'] == 1) {
                         this.treedata = res.data['usrtree'];
-                        this.hisTreeData = res.data['usrtree'];
+                        _hisTreeData = JSON.parse(JSON.stringify(res.data['usrtree']));
                         //  _usrTree.$refs.eltree.setCurrentKey(res.data['curid']);
                     }
                     this.msg = res.data['msg'];
@@ -91,7 +91,7 @@ var _usrTree = new Vue({
                     message: '组织架构已更改!'
                 });
             }).catch(() => {
-                this.treedata = this.hisTreeData;
+                this.treedata = JSON.parse(JSON.stringify(_hisTreeData));
                 this.$message({
                     type: 'info',
                     message: '已取消组织架构更改!'
@@ -337,7 +337,7 @@ var _action = new Vue({
 
                         if (res.data['code'] == 1) {
                             _usrTree.treedata = res.data['usrtree'];
-                            _usrTree.hisTreeData = res.data['usrtree'];
+                            _hisTreeData = JSON.parse(JSON.stringify(res.data['usrtree']));
                             //  _usrTree.$refs.eltree.setCurrentKey(res.data['curid']);
                         }
                         this.msg = res.data['msg'];
